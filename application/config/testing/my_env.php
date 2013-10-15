@@ -9,4 +9,3 @@ $config[ 'minify_css' ] = true;
 // if set to false, then this parameter will not be taken into account, and css/js files will not be combined
 $config[ 'combine_js' ] = true;
 $config[ 'combine_css' ] = true;
-
