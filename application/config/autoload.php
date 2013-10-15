@@ -64,7 +64,7 @@ $autoload['libraries'] = array();
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('myminify', 'mylang', 'file', 'xml', 'mygetbrowser', 'mygeturl', 'mydate');
+$autoload['helper'] = array( 'myminify', 'mylang', 'file', 'xml', 'mygetbrowser', 'mygeturl', 'mydate' );
 
 
 /*
@@ -80,7 +80,7 @@ $autoload['helper'] = array('myminify', 'mylang', 'file', 'xml', 'mygetbrowser',
 |
 */
 
-$autoload['config'] = array('my');
+$autoload['config'] = array( 'my_base', 'my_env' );
 
 
 /*
