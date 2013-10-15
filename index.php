@@ -18,33 +18,19 @@
  * NOTE: If you change these, also change the error_reporting() code below
  *
  */
-$host_name = $_SERVER['SERVER_NAME'];
-$local_host_names = array("starter.local.dev");
-$dev_host_names = array(".hammerlabs.com");
-$test_host_names = array("dev.thecapitol.pn");
 
-foreach ($local_host_names as $local_host_name){
-	$is_local = substr_compare($host_name, $local_host_name, -strlen($local_host_name), strlen($local_host_name)) === 0;
-	if ($is_local) break;
+require_once "custom/env.php";
+$_host_name = $_SERVER[ 'SERVER_NAME' ];
+$_this_env = 'production'; // this is the default env
+foreach ( $_environments_list as $env_name => $env_urls ) {
+	foreach ( $env_urls as $url ) {
+		if ( preg_match( "/{$url}$/", $_host_name ) ) {
+			$_this_env = $env_name; // boom, we found it
+			break 2;
+		}
+	}
 }
-
-foreach ($dev_host_names as $dev_host_name){
-	$is_dev = substr_compare($host_name, $dev_host_name, -strlen($dev_host_name), strlen($dev_host_name)) === 0;
-	if ($is_dev) break;	
-}
-
-foreach ($test_host_names as $test_host_name){
-	$is_test = strpos($host_name, $test_host_name) !== false;
-	if ($is_test) break;	
-}
-
-if ($is_local || $is_dev) {
-	define('ENVIRONMENT', 'development');
-} elseif ($is_test) {
-	define('ENVIRONMENT', 'testing');
-} else {
-	define('ENVIRONMENT', 'production');
-}
+define( 'ENVIRONMENT', $_this_env );
 
 /*
  *---------------------------------------------------------------
