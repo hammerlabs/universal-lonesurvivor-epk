@@ -27,14 +27,16 @@
         </script>  
 
 
+        <?php
+            $CI =& get_instance(); 
+            print($CI->_css_includes_string("head"));
+        ?>
 
+        <?php
+            $CI =& get_instance(); 
+            print($CI->_js_includes_string("head"));
+        ?>
 
-        <link rel="stylesheet" href="assets/css/normalize.min.css">
-        <link rel="stylesheet" href="assets/css/main.css">
-        <link rel="stylesheet" href="assets/css/loader.css">
-
-        <script src="assets/js/libs/jquery-1.10.1.min.js"></script>
-        <script src="assets/js/libs/jquery.queryloader2.js"></script>
 		
     </head>
     <body class="guest"  >
