@@ -1,16 +1,7 @@
 <?php
 
+require_once "custom/env.php";
 $_host_name = $_SERVER[ 'SERVER_NAME' ];
-$_environments_list = array(
-	'development' => array( // development environment
-		'starter.local.dev',
-		'.hammerlabs.com',
-		'.localdomain'
-	),
-	'testing' => array( // testing environment
-		'dev.thecapitol.pn'
-	)
-);
 
 $_this_env = 'production'; // this is the default env
 foreach ( $_environments_list as $env_name => $env_urls ) {
