@@ -1,0 +1,53 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+function minjs($jsarr) {
+	minfiles("js", $jsarr);
+}
+
+function mincss($cssarr) {
+	minfiles("css", $cssarr);
+}
+
+function minfiles($type, $filesarr) {
+	$count = 0;
+
+	// clean files (so far, this means removing non-existant files from list)
+	$clean = array();
+	foreach ($filesarr as $onefile) {
+		$onefile = "assets/{$onefile}";
+		if (checkFileExists($onefile)) {
+			$clean[] = $onefile;
+		}
+	}
+
+	// read config parameters
+	$CI =& get_instance();
+	$minify = ($type == "js") ? $CI->config->item("minify_js") : $CI->config->item("minify_css");
+	$combine = ($type == "js") ? $CI->config->item("combine_js") : $CI->config->item("combine_css");
+	if (!$minify) $combine = false;
+
+	// combine or not?
+	$chunk_size = ($combine) ? 5 : 1;
+	$chunks = array_chunk($clean, $chunk_size);
+
+	// and now, minify
+	foreach ($chunks as $chunk) {
+		$chunkstring = implode(",", $chunk);
+		if ($minify) {
+			$chunkstring = "/min/?f={$chunkstring}";
+		} else {
+			$chunkstring = "/{$chunkstring}";
+		}
+		if ($type == "js") {
+			echo "<script type=\"text/javascript\" src=\"{$chunkstring}\"></script>";
+		} else {
+			echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"{$chunkstring}\" media=\"screen\" />";
+		}
+	}
+}
+
+function checkFileExists($f) {
+	$p = FCPATH;
+	$path = "{$p}{$f}";
+	return is_file($path);
+}

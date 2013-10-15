@@ -1,0 +1,715 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 18px;
+    line-height: 1.4;
+	letter-spacing: 1px;
+	background: #18242b;
+}
+
+a {
+    color: #83bdc9;
+	text-decoration: none;
+}
+
+a:visited {
+    color: #83bdc9;
+}
+
+a:hover {
+    color: #83bdc9;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/* Prevent callout */
+
+.nocallout {
+    -webkit-touch-callout: none;
+}
+
+.pressed {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* A hack for HTML5 contenteditable attribute on mobile */
+
+textarea[contenteditable] {
+    -webkit-appearance: none;
+}
+
+/* A workaround for S60 3.x and 5.0 devices which do not animated gif images if
+   they have been set as display: none */
+
+.gifhidden {
+    position: absolute;
+    left: -100%;
+}
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 0;
+    direction: ltr;
+    display: block;
+    overflow: hidden;
+    text-align: left;
+    text-indent: -999em;
+}
+
+.ir br {
+    display: none;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.hide {
+    display: none ;
+}
+
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/**
+ * Clearfix helper
+ * Used to contain floats: h5bp.com/q
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 800px) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+h3, form {
+    margin:0;
+    padding:0;
+}
+
+input.textinput {
+	border-radius: 5px;
+	border: 1px solid #538c98;
+	background-color: #28555f;
+	/* margin-top: 12px; */
+	padding: 4px 4px;
+	width: 253px;
+	height: 21px;
+}
+
+::-webkit-input-placeholder {
+   color: #83bdc9;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #83bdc9;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #83bdc9;  
+}
+
+:-ms-input-placeholder {  
+   color: #83bdc9;  
+}
+
+span.form-input, span.form-submit {
+    display: block;
+    margin-top: 10px;
+}
+
+span.form-input input[type=checkbox] {
+    float: left;
+}
+
+h3 {
+    display: block;
+	color: #ffffff;
+}
+
+span.radioChoice {
+    margin-right: 6px;
+}
+
+#file-input {
+	overflow: hidden;
+	opacity:0;
+}
+
+input.button {
+	background: url(../img/mobile/button.png);
+	background-position: center;
+	cursor: pointer;
+	border: none;
+	background-size: 172px 44px;
+	width: 172px;
+	height: 44px;
+	color: #ffffff;
+}
+ 
+span#photoInputSpan {
+	display: block;
+}
+ 
+span#photoMaxSize {
+    display:block;
+	text-align: center;
+    font-size: 15px;
+    color: #81a1a8;
+    letter-spacing: 0px;
+    margin-top: -2px;
+}
+
+canvas#upload-canvas {
+	background-color: #28555f;
+	border: 1px solid #538c98;
+	float: left;
+	border-radius: 2px;
+	margin-top: -28px;
+}
+
+span#genderInputSpan {
+	clear: both;
+}
+
+#genderInputSpan label , 
+#termsInputSpan label , 
+#notificationsInputSpan label {  
+    display: inline-block;  
+    cursor: pointer;  
+    position: relative;  
+    padding-left: 34px;
+}
+
+#genderInputSpan input[type=radio], 
+#termsInputSpan input[type=checkbox],  
+#notificationsInputSpan input[type=checkbox] {  
+    display: none;  
+}
+
+#genderInputSpan label:before,  
+#termsInputSpan label:before , 
+#notificationsInputSpan label:before {  
+    content: "";  
+    display: inline-block;  
+    width: 30px;  
+    height: 30px;  
+    margin-right: 10px;  
+    position: absolute;  
+    left: 0; 
+	background: url(../img/mobile/radio.png) left top no-repeat;
+	background-size: 30px 30px;
+} 
+
+#genderInputSpan input[type=radio]:checked  + label:before,
+#termsInputSpan input[type=checkbox]:checked  + label:before ,
+#notificationsInputSpan input[type=checkbox]:checked  + label:before {  
+	background: url(../img/mobile/radioon.png) left top no-repeat;
+	background-size: contain;
+}
+
+/*LOGIN PAGE*/
+div#main-login {
+	background-image: url(../img/mobile/login-bg.jpg); 
+	background-repeat: no-repeat;
+	background-size: 450px 600px;
+	background-position: center;
+	height: 600px;
+	position: absolute;
+	top: 0px;
+	margin-left: 50%;
+	left: -173px;	
+}
+div#main-login #content {
+	background-image: url(../img/mobile/login-content-bg.png);
+	background-repeat: no-repeat;
+	background-size: 347px 347px;
+	height: 347px;
+	width: 347px;
+	overflow: hidden;
+	display: inline-block;
+	padding: 0;
+	padding-bottom: 36px;
+}
+#title {
+	font-family: "abandonedregular", sans-serif;
+	color: #3f9ea9;
+	font-size: 9px;
+	width: 347px;
+	text-align: center;
+	/* margin-top: 145px; */
+	letter-spacing: -1px;
+	padding-top: 154px;
+	font-weight: normal;
+}
+#subtitle {
+	font-family: "abandonedregular", sans-serif;
+	color: #fff;
+	font-size: 12px;
+	width: 347px;
+	text-align: center;
+	letter-spacing: -1px;
+	margin-bottom: 16px;
+	font-weight: normal;
+}
+#twitter {
+	background-image: url(../img/mobile/twitter.png);
+	background-repeat: no-repeat;
+	background-size: 39px 39px;
+	height: 39px;
+	width: 39px;
+	margin: auto;
+	float: left;
+	margin-left: 124px;
+}
+#facebook {
+	background-image: url(../img/mobile/facebook.png);
+	background-repeat: no-repeat;
+	background-size: 39px 39px;
+	height: 39px;
+	width: 39px;
+	margin: auto;
+	float: left;
+	margin-left: 25px;
+}
+
+/*HOME PAGE*/
+div#main-home {
+	background-image: url(../img/mobile/home-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: 450px 600px;
+	background-position: center;
+	height: 600px;
+	margin: auto;
+}
+div#main-home #view-site-btn {
+	background-image: url(../img/mobile/full-site-btn-bg.png);
+	background-repeat: no-repeat;
+	background-size: 172px 44px;
+	height: 44px;
+	width: 172px;
+	margin: auto;
+	overflow: hidden;
+}
+#content {
+	padding-top: 80px;
+}
+.card{
+    background-image: url("../img/mobile/id-card-bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;  
+    width: 264px;
+    height: 420px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.photo{
+    background-image: url("../img/mobile/default_id.png");
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-position: 50% 50%;
+    width: 108px;
+    height: 108px;
+	position: relative;
+	
+    top: 24px;
+	
+    left: 24px;
+}
+.district-logo {    
+    background-image: url("../img/mobile/id-card-logo-bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;  
+    background-position: center;
+    width: 114px;
+    height: 105px;
+	position: relative;	
+    top: -83px;	
+    left: 132px;
+}
+
+.district1 .district-logo {
+    background-image: url("../img/mobile/card-districts/idcard_d1.png");
+}
+.district2 .district-logo {
+    background-image: url("../img/mobile/card-districts/idcard_d2.png");
+}
+.district3 .district-logo {
+    background-image: url("../img/mobile/card-districts/idcard_d3.png");
+}
+.district4 .district-logo {
+    background-image: url("../img/mobile/card-districts/idcard_d4.png");
+}
+.district5 .district-logo {
+    background-image: url("../img/mobile/card-districts/idcard_d5.png");
+}
+.district6 .district-logo {
+    background-image: url("../img/mobile/card-districts/idcard_d6.png");
+}
+.district7 .district-logo {
+    background-image: url("../img/mobile/card-districts/idcard_d7.png");
+}
+.district8 .district-logo {
+    background-image: url("../img/mobile/card-districts/idcard_d8.png");
+}
+.district9 .district-logo {
+    background-image: url("../img/mobile/card-districts/idcard_d9.png");
+}
+.district10 .district-logo {
+    background-image: url("../img/mobile/card-districts/idcard_d10.png");
+}
+.district11 .district-logo {
+    background-image: url("../img/mobile/card-districts/idcard_d11.png");
+}
+.district12 .district-logo {
+    background-image: url("../img/mobile/card-districts/idcard_d12.png");
+}
+
+
+.title{
+	color: #304562;
+	font-family: 'Dosis', sans-serif;
+	font-weight: bold;
+	font-size: 8px;
+	line-height: 10px;
+	position: relative;
+	top: -59px;
+	left: 18px;
+}        
+.citizen-name{
+	color: #304562;
+	font-family: 'abandonedregular', sans-serif;
+	font-weight: bold;
+	font-size: 17px;
+	position: relative;
+	top: -33px;
+	left: 15px;
+	letter-spacing: -2px;
+	text-transform: uppercase;
+}        
+ul.data-labels{
+	color: white;
+	font-family: 'Dosis', sans-serif;
+	font-weight: bold;
+	font-size: 8px;
+	list-style: none;
+	position: relative;
+	top: -19px;
+	left: -23px;
+	line-height: 12px;
+}
+ul.data-fields {
+	color: #304562;
+	font-family: 'Dosis', sans-serif;
+	font-weight: bold;
+	font-size: 8px;
+	text-align: right;
+	list-style: none;
+	position: relative;
+	top: -99px;
+	left: -15px;
+	line-height: 12px;
+}
+li {
+	display: list-item;
+}
+
+.view-site-btn-text {
+	font-family: "Dosis", sans-serif;
+	color: #fff;
+	line-height: 1.062;
+	text-align: center;
+	font-size: 12px;
+	width: 172px;
+	margin-top: 17px;
+	left: 37px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+/*HOME PAGE*/
+div#main-register {
+	background-image: url(../img/mobile/register-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: 450px 600px;
+	background-position: center;
+	height: 600px;
+	position: absolute;
+	top: 0px;
+	margin-left: 50%;
+	left: -149px;	
+}
+div#main-register form {
+	width: 280px;
+	margin: auto;
+	padding-top: 80px;
+	color: #83bdc9;
+	padding-left: 18px;
+}
+
+div#main-register form input{
+	color: #83bdc9;
+}
+
+
+.title-text {
+	font-family: "Dosis", sans-serif;
+	color: #fff;
+	line-height: 1.062;
+	text-align: left;
+	font-size: 20px;
+	font-weight: 400;
+	opacity: .8;
+	letter-spacing: 1px;
+	padding-left: 6px;
+}
+
+#uploadbtn {
+	font-family: "Dosis", sans-serif;
+	color: #fff;
+	line-height: 1.062;
+	text-align: center;
+	font-size: 12px;
+	width: 161px;
+	margin-left: 10px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+#submit {
+	font-family: "Dosis", sans-serif;
+	color: #fff;
+	line-height: 1.062;
+	text-align: center;
+	font-size: 12px;
+	width: 161px;
+	padding-top: 8px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+#register_username {
+	letter-spacing: 1px;
+}
+#register_email {
+	letter-spacing: 1px;
+}
+div#main-register #upload-btn {
+	background-image: url(../img/mobile/upload-btn.png);
+	background-repeat: no-repeat;
+	background-size: 162px 44px;
+	height: 44px;
+	width: 162px;
+	overflow: hidden;
+	margin-top: 39px;
+	padding-left: 6px;
+	background-position: 6px 0;
+}
+div#main-register #submit-btn {
+	background: url(../img/mobile/submit-btn.png);
+	background-repeat: no-repeat;
+	background-size: 172px 44px;
+	height: 44px;
+	width: 172px;
+	margin: auto;
+	overflow: hidden;
+}
+.submit-btn-text {
+	font-family: "Dosis", sans-serif;
+	color: #fff;
+	line-height: 1.062;
+	text-align: center;
+	position: relative;
+	font-size: 12px;
+	width: 172px;
+	top: 17px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+.upload-btn-text {
+	font-family: "Dosis", sans-serif;
+	color: #fff;
+	line-height: 1.062;
+	text-align: center;
+	position: relative;
+	font-size: 12px;
+	width: 162px;
+	top: 17px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+#submitSpan {
+	width: 172px;
+	margin: auto;
+	margin-top: 8px;
+}
+.gender {
+	padding-top: 18px;
+}
+.genderMale {
+	margin-top: 5px;
+}
+.terms {
+	padding-top: 19px;
+	width: 210px;
+	line-height: 20px;
+}
+.email {
+	padding-top: 9px;
+}
+
+.basic-radio {
+	line-height: 30px;
+}
+.underline {
+	text-decoration: underline;
+}
+
+
+/*Control sections*/
+.guest #main-home{
+	display:none;
+}
+
+#main-login, #main-register{
+	display: none;
+}
+.guest #main-login{
+	display:block;
+}

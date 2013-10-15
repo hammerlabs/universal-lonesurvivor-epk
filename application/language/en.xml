@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<keys>
+	<key k="welcome_to_ci">Welcome to CodeIgniter</key>
+	<key k="the_page_youre_looking_at">The page you are looking at is being generated dynamically by &lt;b&gt;CodeIgniter&lt;/b&gt;</key>
+	<key k="complex_text"><![CDATA[
+		This is some complex text.<br/>
+		Ólé Ólé Ólé !<br/>
+		ñçó<br/>
+		<b>some tags</b> <i>some tags</i>
+	]]></key>
+</keys>
