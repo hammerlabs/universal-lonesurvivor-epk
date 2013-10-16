@@ -8,3 +8,11 @@ $config[ 'available_langs' ] = array( "en", "es" );
 $config[ 'default_lang' ] = "en";
 
 
+// Configuration of Feature and folder checks
+$config['required_features']=array("oauth","curl");
+
+//List folders that need to exist (and maybe writeable)
+$config['check_folders']=array(
+	array("folder"=>"assets","requires_write"=>false),
+	array("folder"=>"assets/uploadimages","requires_write"=>true)
+);

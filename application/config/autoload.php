@@ -80,7 +80,7 @@ $autoload['helper'] = array( 'myminify', 'mylang', 'file', 'xml', 'mygetbrowser'
 |
 */
 
-$autoload['config'] = array( 'my_base', 'my_env' );
+$autoload['config'] = array( 'features','my_base', 'my_env' );
 
 
 /*

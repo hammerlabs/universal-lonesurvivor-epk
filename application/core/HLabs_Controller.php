@@ -36,7 +36,7 @@
 	}
 
 	public function _css_includes($group="head"){
-		minjs($this->_css_includes_array($group));	
+		mincss($this->_css_includes_array($group));	
 	}
 
 

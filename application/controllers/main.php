@@ -23,12 +23,10 @@ class Main extends HLabs_Controller {
 		$data["ga_account"] = $this->config->item( 'ga_account' );	
 
 		
-		$this->_add_css("assets/css/normalize.min.css","head");
-		$this->_add_css("assets/css/main.css","head");
-		$this->_add_css("assets/css/loader.css","head");
+		$this->_add_css("css/normalize.min.css","head");
         
-        $this->_add_js("assets/js/libs/jquery-1.10.1.min.js","head");
-        $this->_add_js("assets/js/libs/jquery.queryloader2.js","head");
+        $this->_add_js("js/libs/jquery-1.10.1.min.js","head");
+        $this->_add_js("js/libs/jquery.queryloader2.js","head");
 
 
 
@@ -45,7 +43,10 @@ class Main extends HLabs_Controller {
 		$this->_add_js("js/upload.js","footer");
 
 
+		$preloader = $this->load->view('main_preloader',$data,true);
+		$loader = $this->load->view('main_loader',$data,true);
 
+		
 		$main = $this->load->view('main',$data,true);
 		
 		$foot = $this->load->view('main_foot',$data,true);
@@ -53,6 +54,8 @@ class Main extends HLabs_Controller {
 		$head = $this->load->view('main_head', $data, true);
 
 		$this->output->append_output($head);
+		$this->output->append_output($preloader);
+		$this->output->append_output($loader);
 		$this->output->append_output($main);
 		$this->output->append_output($foot);
 	}
