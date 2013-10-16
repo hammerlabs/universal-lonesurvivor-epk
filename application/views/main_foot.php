@@ -2,11 +2,6 @@
             <div class="main_preloads hide">
             </div>
 
-        <?php
-            $CI =& get_instance(); 
-            print($CI->_js_includes_string("footer"));
-        ?>
-
 
 		<?php
             $CI =& get_instance(); 
