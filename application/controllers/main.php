@@ -32,7 +32,7 @@ class Main extends HLabs_Controller {
 
 		//Javascript added at the end of the document
         $this->_add_js("js/libs/requestAnimationFrame.js","footer",array("weight"=>-200));
-        $this->_add_js("http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js","footer");
+        $this->_add_js("js/libs/TweenLite.min.js","footer");
         $this->_add_js("js/libs/jquery.touchSwipe.js","footer");
         $this->_add_js("js/libs/jquery.parallax.js","footer");
 		$this->_add_js("js/libs/binaryajax.js","footer");
