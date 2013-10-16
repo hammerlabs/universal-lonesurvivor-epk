@@ -31,6 +31,15 @@
 		$this->js_groups[$group][]=$options;
 	}
 
+	public function _js_includes($group="head"){
+		minjs($this->_js_includes_array($group));
+	}
+
+	public function _css_includes($group="head"){
+		minjs($this->_css_includes_array($group));	
+	}
+
+
 	public function _js_includes_array($group="head"){
 		$js=$this->js_groups[$group];
 		$js=$this->sortByColumn($js,"weight");

@@ -28,13 +28,9 @@
 
 
         <?php
-            $CI =& get_instance(); 
-            print($CI->_css_includes_string("head"));
-        ?>
-
-        <?php
-            $CI =& get_instance(); 
-            print($CI->_js_includes_string("head"));
+            $CI =& get_instance();
+            $CI->_css_includes("head"); 
+            $CI->_js_includes("head"); 
         ?>
 
 		

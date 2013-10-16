@@ -11,20 +11,23 @@ function mincss($cssarr) {
 function minfiles($type, $filesarr) {
 	$count = 0;
 
+	// read config parameters
+	$CI =& get_instance();
+	$base = $CI->config->item("minify_base_folder");
+	$minify = ($type == "js") ? $CI->config->item("minify_js") : $CI->config->item("minify_css");
+	$combine = ($type == "js") ? $CI->config->item("combine_js") : $CI->config->item("combine_css");
+	if (!$minify) $combine = false;
+
+
 	// clean files (so far, this means removing non-existant files from list)
 	$clean = array();
 	foreach ($filesarr as $onefile) {
-		$onefile = "assets/{$onefile}";
+		$onefile = $base."/{$onefile}";
 		if (checkFileExists($onefile)) {
 			$clean[] = $onefile;
 		}
 	}
 
-	// read config parameters
-	$CI =& get_instance();
-	$minify = ($type == "js") ? $CI->config->item("minify_js") : $CI->config->item("minify_css");
-	$combine = ($type == "js") ? $CI->config->item("combine_js") : $CI->config->item("combine_css");
-	if (!$minify) $combine = false;
 
 	// combine or not?
 	$chunk_size = ($combine) ? 5 : 1;

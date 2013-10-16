@@ -5,7 +5,7 @@
 
 		<?php
             $CI =& get_instance(); 
-    		minjs( $CI->_js_includes_array("footer"));
+    		$CI->_js_includes("footer");
 		?>
 
         <script type="text/javascript">
