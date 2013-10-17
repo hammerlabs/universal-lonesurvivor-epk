@@ -5,4 +5,6 @@
 	$CI->_add_js("js/main.js","footer");
 ?>
 
-<h1>This is the main site</h1>
+        <div class="main-container hide"  >
+			<h1>This is the main site</h1>
+		</div>

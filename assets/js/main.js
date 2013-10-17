@@ -18,29 +18,26 @@
 	}
 
 
-	//Prepare callback function to remove overlay when resources finish loading
-	var killOverlay=function(){
-		//window.scroller.setScrollTop(1150);
-		$(".navbar-fixed-top .container").show();
-		TweenLite.to($(".main_overlay.loading"),1,{opacity:0,onComplete:function(){
-			$(".main_overlay.loading").hide();	
-		}})
-	};
-
 
 
 	//Code that needs to run only when DOM and scripts are loaded.
 	$(document).ready(function () {
 
+		window.preloader = $(".loader-container.preloader");
+		window.mainloader=$(".loader-container.main-loader");
+		window.maincontainer=$(".main-container");
 
-
-
-	    $(".loader-container").queryLoader2({barHeight: 2,onComplete:function(){
-
-	    	$(".loader-container .loader").show();
-
+		//Load preloader images
+	   	window.mainloader.queryLoader2({barHeight: 2,onComplete:function(){
 			
-			//Add source to secuence images to get them downloaded by browser
+							    	
+	    	//Once preloader is done, hide it and show the loader
+	    	TweenLite.to(window.preloader, 1, {opacity:0});
+	    	window.mainloader.css("opacity",0).show();
+	    	TweenLite.to(window.mainloader, 1, {opacity:1});
+	    				
+			//Add source to deferred images to get them downloaded by browser
+			//We do this to avoid the browser from delaying preloader because of loading imgs already at dom
 			$("img").each(function(){
 				var src=$(this).data("source")
 				if (src!=""){
@@ -56,10 +53,16 @@
 	});
 
 	function startMainLoader(){
-	    window.mainLoader=$(".main-container").queryLoader2(
+	    window.mainAssetsLoader=window.maincontainer.queryLoader2(
 	    	{
 	    		onComplete:function(){
 			    	window.mainLoaderReady=true;
+			    	window.maincontainer.css("opacity",0).show();
+			    	TweenLite.to(window.mainloader, 1, {opacity:0});
+			    	TweenLite.to(window.maincontainer, 1, {opacity:1,onComplete:function(){
+			    		window.mainloader.remove();
+			    	}});
+
 			    },
 			    onProgress:function(percentage){
 			    	//Do something with the percentage of loading that is complete.
@@ -70,56 +73,6 @@
 
 	}
 
-
-	function allLoaded(){
-		if (red_api.authenticated){
-			if (!window.loginBehaviorReady){
-				window.behaviors();
-			}
-			mainScreen();
-		}
-		else{
-			login();
-		}
-
-		
-    	$(".main-container").css("opacity",0).show();
-    	TweenLite.to($(".loader-container"), 1, {opacity:0});
-    	TweenLite.to($(".main-container"), 1, {opacity:1,onComplete:function(){
-    		$(".loader-container").remove();
-    	}});
-
-	}
-
-	function mainScreen(){
-
-			//window.footer=$(".main-container footer").eqfooter();
-			if (!window.screener){
-				window.screener=$("#main_screener").stripScreener({
-					onStartScreening:function(){
-				//		window.footer.stop();
-					},
-					onEndScreening:function(){
-				//		window.footer.start();
-					}
-
-				});
-
-				$('.main-container').parallax({limitY: 20, scalarY:0.7});
-			}
-
-    	$("#main_screener").css("opacity",0).show();
-    	TweenLite.to($(".main .login"), 1, {opacity:0});
-    	TweenLite.to($(".main-title"), 1, {opacity:1});
-    	TweenLite.to($(".login-btn"), 1, {opacity:1});
-    	TweenLite.to($(".logout-btn"), 1, {opacity:1});
-    	TweenLite.to($("#main_screener"), 1, {opacity:1,onComplete:function(){
-
-    		$( ".main .login" ).hide();
-    	}});
-
-
-	}
 	
 
 }( jQuery ));

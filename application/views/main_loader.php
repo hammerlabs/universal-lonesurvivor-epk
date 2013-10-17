@@ -1,5 +1,7 @@
-<?php
-    $CI =& get_instance(); 
-	$CI->_add_css("css/loader.css","head");
-?>
-<span>This is the loader</span>
+        <div class="loader-container main-loader hide">
+            <div class="screen-bg"></div>            
+            <div class="loader">                
+            	<span>This is the loader</span>
+            </div>
+        </div>
+

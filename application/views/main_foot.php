@@ -8,6 +8,7 @@
     		$CI->_js_includes("footer");
 		?>
 
+        
         <script type="text/javascript">
             if (window.ga_account!=""){        
                 var _gaq = _gaq || [];

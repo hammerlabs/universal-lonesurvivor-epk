@@ -9,7 +9,7 @@ body {
 }
 
 /*We need to force iPad browser to use hardware acceleration*/
-.main-container .screen * {
+.main-container * {
     -webkit-transform: translate3d(0,0,0);  
 }
 

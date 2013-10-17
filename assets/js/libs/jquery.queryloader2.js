@@ -50,6 +50,11 @@
             //create containers
             base.createPreloadContainer();
             base.createOverlayLoader();
+
+            if (base.qLdone == base.qLimageCounter) {
+                base.endLoader();
+            }
+            
         };
 
         //the container where unbindable images will go
@@ -170,6 +175,7 @@
             base.qLdestroyed = true;
             base.qLimageContainer.remove();
             base.qLoverlay.remove();
+            base.options.onComplete();
         };
 
         base.findImageInElement = function (element) {
