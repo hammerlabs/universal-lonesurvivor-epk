@@ -13,7 +13,7 @@ function minfiles($type, $filesarr) {
 
 	// read config parameters
 	$CI =& get_instance();
-	$base = $CI->config->item("minify_base_folder");
+	$base = ($type == "js") ? $CI->config->item("minify_js_base_folder") : $CI->config->item("minify_css_base_folder");
 	$minify = ($type == "js") ? $CI->config->item("minify_js") : $CI->config->item("minify_css");
 	$combine = ($type == "js") ? $CI->config->item("combine_js") : $CI->config->item("combine_css");
 	if (!$minify) $combine = false;
@@ -23,7 +23,7 @@ function minfiles($type, $filesarr) {
 	$clean = array();
 	foreach ($filesarr as $onefile) {
 		$onefile = $base."/{$onefile}";
-		if (checkFileExists($onefile)) {
+		if (checkFileExists($onefile) || !($minify)) {
 			$clean[] = $onefile;
 		}
 	}

@@ -3,7 +3,9 @@
 // wheter to minify js/css or not
 $config[ 'minify_js' ] = true;
 $config[ 'minify_css' ] = true;
-$config[ 'minify_base_folder' ] = "assets";
+
+$config[ 'minify_css_base_folder' ] = "assets";
+$config[ 'minify_js_base_folder' ] = "assets";
 
 
 // set to true to combine minified files (in a single <script> or <link> element)

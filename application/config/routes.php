@@ -44,6 +44,7 @@ $route['404_override'] = '';
 
 $route['site']="main";
 
+$route['less/(.*)'] = "less";
 $route['^[a-z]{2}/(.+)$'] = "$2";
 $route['^[a-z]{2}$'] = $route['default_controller'];
 
