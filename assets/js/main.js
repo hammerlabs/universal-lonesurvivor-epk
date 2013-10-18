@@ -8,6 +8,9 @@
 	        return;
 	    }
 	}
+	$(document).scroll(function(e){
+	    $('#status').html($(window).scrollTop());
+	});
 
 
 	window.isiPad = navigator.userAgent.match(/iPad/i) != null;
@@ -143,7 +146,7 @@
 	/* ==========================================================================
 	   add ambient music feature
 	   ========================================================================== */
-		var audioUrl = "assets/audio/ambience.mp3";
+		var audioUrl = (location.host.indexOf(".local") != -1 ? "" : "assets/audio/ambience.mp3");
 		var audioSelector = ".audio-control";
 		//Add ambience sound
 		window.amb_snd = new Audio( audioUrl ); // buffers automatically when created
@@ -180,6 +183,14 @@
 		 		}
 		 	}
 	    });
+
+		window.scroller=skrollr.init({
+			forceHeight: false,
+			smoothScrolling:false,
+			mobileDeceleration:0.1
+		});
+
+
 	}
 
 	

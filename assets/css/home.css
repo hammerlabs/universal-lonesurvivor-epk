@@ -5,7 +5,11 @@ div#home {
 div#home div#video {
   min-width: 978px;
   max-width: 1280px;
-  margin: auto;
+  margin-left: 50%;
+  position: absolute;
+  top: 35px;
+  left: -640px;
+  height: 686px;
 }
 div#home div#video img {
   display: none;
@@ -19,7 +23,7 @@ div#home div#video .video-texture {
   width: 100%;
   background-image: url(/assets/img/home/scanlines.png);
   position: relative;
-  top: -686px;
+  top: -689px;
   height: 686px;
 }
 div.section {
@@ -27,26 +31,53 @@ div.section {
   height: 2000px;
   background-repeat: no-repeat;
   background-position: center center;
+  position: absolute;
 }
-div.section .content {
+div .home-content {
   width: 978px;
-  margin: auto;
+  margin-left: 50%;
+  left: -489px;
+  position: absolute;
 }
-div#marcus.section {
+div .fore {
+  position: absolute;
+  background-repeat: no-repeat;
+}
+div .fore.left {
+  background-image: url(/assets/img/home/left_branch.png);
+  width: 254px;
+  height: 693px;
+}
+div .fore.right {
+  background-image: url(/assets/img/home/right_branch.png);
+  width: 365px;
+  height: 836px;
+  right: 0px;
+}
+div.marcus.section {
   background-image: url(/assets/img/home/marcus/bg.jpg);
+  top: 686px;
 }
-div#mikey.section {
+div.marcus.home-content {
+  top: 686px;
+}
+div.mikey.section {
   background-image: url(/assets/img/home/mikey/bg.jpg);
+  top: 2686px;
 }
-div#axe.section {
+div.axe.section {
   background-image: url(/assets/img/home/axe/bg.jpg);
+  top: 4686px;
 }
-div#dietz.section {
+div.dietz.section {
   background-image: url(/assets/img/home/dietz/bg.jpg);
+  top: 6686px;
 }
-div#tribute.section {
+div.tribute.section {
   background-image: url(/assets/img/home/tribute/bg.jpg);
-  height: 2250px;
+  background-position: top center;
+  top: 8686px;
+  height: 1650px;
 }
 .blocktext {
   padding-left: 12px;
@@ -78,7 +109,7 @@ div#tribute.section {
   padding-top: 6px;
   padding-bottom: 6px;
 }
-.section .container {
+.home-content .container {
   position: relative;
   min-height: 200px;
 }
@@ -143,194 +174,200 @@ div#tribute.section {
 .quote-bot .container img {
   position: absolute;
 }
-#marcus .quote-top {
-  top: 1054px;
+.marcus.fore {
+  top: 1360px;
 }
-#marcus .quote-top-img {
+.marcus .quote-top {
+  top: 368px;
+}
+.marcus .quote-top-img {
   left: 21px;
 }
-#marcus .job {
-  top: 1381px;
+.marcus .job {
+  top: 795px;
 }
-#marcus .job .container {
+.marcus .job .container {
   left: 360px;
 }
-#marcus .job .bodycopy {
+.marcus .job .bodycopy {
   width: 315px;
 }
-#marcus .bio {
-  top: 1684px;
+.marcus .bio {
+  top: 1098px;
 }
-#marcus .bio .container {
+.marcus .bio .container {
   left: 0px;
   background-image: url(/assets/img/home/marcus/bio-img.png);
   background-repeat: no-repeat;
 }
-#marcus .bio .bodycopy {
+.marcus .bio .bodycopy {
   width: 493px;
 }
-#marcus .bio .role {
+.marcus .bio .role {
   padding-left: 100px;
 }
-#marcus .quote-bot {
-  top: 2105px;
+.marcus .quote-bot {
+  top: 1519px;
 }
-#marcus .quote-bot .container {
+.marcus .quote-bot .container {
   left: 0px;
   height: 270px;
 }
-#marcus .quote-bot-text-img {
+.marcus .quote-bot-text-img {
   top: 0px;
   left: 0px;
 }
-#marcus .quote-bot-img {
+.marcus .quote-bot-img {
   top: 115px;
   left: 181px;
 }
-#mikey .quote-top {
-  top: 2986px;
+.mikey .quote-top {
+  top: 2300px;
 }
-#mikey .quote-top-img {
+.mikey .quote-top-img {
   left: 72px;
 }
-#mikey .job {
-  top: 3355px;
+.mikey .job {
+  top: 2769px;
 }
-#mikey .job .container {
+.mikey .job .container {
   left: 0px;
 }
-#mikey .job .bodycopy {
+.mikey .job .bodycopy {
   width: 268px;
 }
-#mikey .bio {
-  top: 3703px;
+.mikey .bio {
+  top: 3117px;
 }
-#mikey .bio .container {
+.mikey .bio .container {
   left: 0px;
   background-image: url(/assets/img/home/mikey/bio-img.png);
   background-repeat: no-repeat;
 }
-#mikey .bio .bodycopy {
+.mikey .bio .bodycopy {
   width: 532px;
 }
-#mikey .bio .role {
+.mikey .bio .role {
   padding-left: 100px;
 }
-#mikey .quote-bot {
-  top: 4296px;
+.mikey .quote-bot {
+  top: 3710px;
 }
-#mikey .quote-bot .container {
+.mikey .quote-bot .container {
   left: 174px;
   height: 270px;
 }
-#mikey .quote-bot-text-img {
+.mikey .quote-bot-text-img {
   top: 0px;
   left: 0px;
 }
-#mikey .quote-bot-img {
+.mikey .quote-bot-img {
   top: 86px;
   left: 229px;
 }
-#axe .quote-top {
-  top: 5005px;
+.axe .quote-top {
+  top: 4319px;
 }
-#axe .quote-top-img {
+.axe .quote-top-img {
   left: 24px;
 }
-#axe .job {
-  top: 5335px;
+.axe .job {
+  top: 4749px;
 }
-#axe .job .container {
+.axe .job .container {
   left: 0px;
 }
-#axe .job .bodycopy {
+.axe .job .bodycopy {
   width: 268px;
 }
-#axe .bio {
-  top: 5653px;
+.axe .bio {
+  top: 5067px;
 }
-#axe .bio .container {
+.axe .bio .container {
   left: 0px;
   background-image: url(/assets/img/home/axe/bio-img.png);
   background-repeat: no-repeat;
 }
-#axe .bio .bodycopy {
+.axe .bio .bodycopy {
   width: 532px;
 }
-#axe .bio .role {
+.axe .bio .role {
   margin-left: -125px;
 }
-#axe .quote-bot {
-  top: 6246px;
+.axe .quote-bot {
+  top: 5660px;
 }
-#axe .quote-bot .container {
+.axe .quote-bot .container {
   left: 0px;
   height: 270px;
 }
-#axe .quote-bot-text-img {
+.axe .quote-bot-text-img {
   top: 0px;
   left: 0px;
 }
-#axe .quote-bot-img {
+.axe .quote-bot-img {
   top: 106px;
   left: 197px;
 }
-#dietz .quote-top {
-  top: 7003px;
+.dietz .quote-top {
+  top: 6317px;
 }
-#dietz .quote-top-img {
+.dietz .quote-top-img {
   left: 21px;
 }
-#dietz .job {
-  top: 7347px;
+.dietz .job {
+  top: 6761px;
 }
-#dietz .job .container {
+.dietz .job .container {
   left: 0px;
 }
-#dietz .job .bodycopy {
+.dietz .job .bodycopy {
   width: 268px;
 }
-#dietz .bio {
-  top: 7685px;
+.dietz .bio {
+  top: 7099px;
 }
-#dietz .bio .container {
+.dietz .bio .container {
   left: 0px;
   background-image: url(/assets/img/home/dietz/bio-img.png);
   background-repeat: no-repeat;
 }
-#dietz .bio .bodycopy {
+.dietz .bio .bodycopy {
   width: 532px;
 }
-#dietz .bio .role {
+.dietz .bio .role {
   padding-left: 16px;
 }
-#dietz .quote-bot {
-  top: 8292px;
+.dietz .quote-bot {
+  top: 7706px;
 }
-#dietz .quote-bot .container {
+.dietz .quote-bot .container {
   left: 0px;
   height: 270px;
 }
-#dietz .quote-bot-text-img {
+.dietz .quote-bot-text-img {
   top: 0px;
   left: 0px;
 }
-#dietz .quote-bot-img {
+.dietz .quote-bot-img {
   top: 89px;
   left: 355px;
 }
-#tribute .quote-image {
+.tribute.home-content {
+  top: -30px;
+}
+.tribute .quote-image {
   position: absolute;
   top: 9026px;
   left: 0px;
 }
-#tribute .blocktext {
+.tribute .blocktext {
   background-color: #000;
   color: #fff;
   float: left;
   clear: both;
 }
-#tribute .seal {
+.tribute .seal {
   height: 224px;
 }
 .seal .container {
@@ -339,26 +376,26 @@ div#tribute.section {
   padding-top: 26px;
   left: 81px;
 }
-#tribute .seals {
+.tribute .seals {
   position: absolute;
   top: 9280px;
   width: 978px;
   overflow: hidden;
   color: #c9c9c9;
 }
-#tribute .marcus .container {
+.tribute .marcus .container {
   background-image: url(/assets/img/home/tribute/marcus.png);
 }
-#tribute .mikey .container {
+.tribute .mikey .container {
   background-image: url(/assets/img/home/tribute/mikey.png);
 }
-#tribute .axe .container {
+.tribute .axe .container {
   background-image: url(/assets/img/home/tribute/axe.png);
 }
-#tribute .dietz .container {
+.tribute .dietz .container {
   background-image: url(/assets/img/home/tribute/dietz.png);
 }
-#tribute .seal .team {
+.tribute .seal .team {
   font-size: 14px;
   font-weight: bold;
   color: #fff;
@@ -369,40 +406,40 @@ div#tribute.section {
   margin-left: -275px;
   margin-top: 146px;
 }
-#tribute .honor {
+.tribute .honor {
   width: 678px;
   position: absolute;
   top: 10270px;
   text-align: center;
   padding-right: 300px;
 }
-#tribute .honor-title {
+.tribute .honor-title {
   color: #fff;
   font-size: 24px;
 }
-#tribute .honor-subtitle {
+.tribute .honor-subtitle {
   color: #fff;
   font-size: 22px;
 }
-#tribute .flag-image {
+.tribute .flag-image {
   background-image: url(/assets/img/home/tribute/flag.png);
   margin-top: 38px;
   height: 30px;
   background-repeat: no-repeat;
   background-position: center;
 }
-#tribute .honor-column {
+.tribute .honor-column {
   float: left;
   width: 226px;
   margin-top: 38px;
 }
-#tribute .honor-name-title {
+.tribute .honor-name-title {
   display: block;
   font-size: 18px;
   color: #fff;
   opacity: .9;
 }
-#tribute .honor-rank {
+.tribute .honor-rank {
   display: block;
   font-weight: 200;
   color: #fff;
