@@ -27,6 +27,7 @@ class Main extends HLabs_Controller {
         
         $this->_add_js("js/libs/jquery-1.10.1.min.js","head");
         $this->_add_js("js/libs/jquery.queryloader2.js","head");
+        $this->_add_js("js/libs/modernizr-2.6.2-respond-1.1.0.min.js","head");
 
 
 

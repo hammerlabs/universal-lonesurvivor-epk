@@ -16,3 +16,13 @@ $config['check_folders']=array(
 	array("folder"=>"assets","requires_write"=>false),
 	array("folder"=>"assets/uploadimages","requires_write"=>true)
 );
+
+//Meta tags, FB tags, etc.
+$config["title"] = "Site Title"; 
+$config["desc"] = "Site Description"; 
+$config["url"] = "URL to production site"; 
+$config["image"] = "URL to image at root of site to be used for social postings"; 
+$config["facebook_url"] = "URL to facebook landing page";    
+$config["keywords"] = "Site Keywords";    
+$config["og_title"] = "Site title to display in facebook";  
+$config["ga_account"] = ""; //Google Analytics account. Leave empty to disable.
