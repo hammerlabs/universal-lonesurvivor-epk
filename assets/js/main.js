@@ -25,9 +25,9 @@
 	}
 
 	// support chrome and firefox by changing src to ogv in js instead of nested source tags
-	var videorefs = $( "body" ).find("video");
-	if (videoRefs[0] && !videorefs[0].canPlayType('video/mp4; codecs="avc1.42E01E, mp4a.40.2"')) {
-		videorefs.each(function() {
+	var videoRefs = $( "body" ).find("video");
+	if (videoRefs && videoRefs[0] && !videoRefs[0].canPlayType('video/mp4; codecs="avc1.42E01E, mp4a.40.2"')) {
+		videoRefs.each(function() {
 			$(this).src = $(this).src.replace(".mp4", ".ogv");
 		});
 	}
