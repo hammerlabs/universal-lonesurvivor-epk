@@ -267,21 +267,27 @@ input {
   margin-bottom: 10px;
 }
 #showtimes::-webkit-input-placeholder {
+  font-family: 'Oswald', sans-serif;
   color: #999999;
 }
 #showtimes::-moz-placeholder {
+  font-family: 'Oswald', sans-serif;
   color: #999999;
 }
 #showtimes:-ms-input-placeholder {
+  font-family: 'Oswald', sans-serif;
   color: #999999;
 }
-#showtimes:focus::-webkit-input-placeholder {
+#showtimes::-webkit-input-placeholder:focus {
+  font-family: 'Oswald', sans-serif;
   color: transparent;
 }
-#showtimes:focus::-moz-placeholder {
+#showtimes::-moz-placeholder:focus {
+  font-family: 'Oswald', sans-serif;
   color: transparent;
 }
-#showtimes:focus:-ms-input-placeholder {
+#showtimes:-ms-input-placeholder:focus {
+  font-family: 'Oswald', sans-serif;
   color: transparent;
 }
 #showtimes a {
@@ -411,4 +417,5 @@ input {
   color: #f00;
   top: 0px;
   right: 10px;
+  display: none;
 }
