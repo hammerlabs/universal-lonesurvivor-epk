@@ -13,7 +13,6 @@
         <link rel="canonical" href="<?php echo $url; ?>" />
         <meta name="description" content="<?php echo $desc; ?>">
         <meta name="keywords" content="<?php echo $keywords; ?>"> 
-        <meta name="viewport" content="<?php echo $ua['view_port']; ?>">      
         
         <meta property="og:title" content="<?php echo $og_title; ?>" />  
         <meta property="og:description" content="<?php echo $desc; ?>" />
@@ -27,6 +26,8 @@
         </script>  
 
 
+        <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Share+Tech' rel='stylesheet' type='text/css'>
         <?php
             $CI =& get_instance();
             $CI->_css_includes("head"); 
@@ -39,4 +40,21 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
+        <!-- include this for Facebook JS SDK to work -->
+        <div id="fb-root"></div>
+        <!-- Start of DoubleClick Floodlight Tag: Please do not remove
+        Activity name of this tag: Lone Survivor Main Site
+        URL of the webpage where the tag is expected to be placed: http://www.lonesurvivorfilm.com/
+        This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+        Creation Date: 10/03/2013 -->
+        <script type="text/javascript">
+            var axel = Math.random() + "";
+            var a = axel * 10000000000000;
+            document.write('<iframe src="http://1400366.fls.doubleclick.net/activityi;src=1400366;type=lones495;cat=lones109;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+        </script>
+        <noscript>
+            <iframe src="http://1400366.fls.doubleclick.net/activityi;src=1400366;type=lones495;cat=lones109;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+        </noscript>
+        <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+
 

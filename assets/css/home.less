@@ -1,0 +1,451 @@
+@homeheight: 686px;
+
+/* ==========================================================================
+   HOME custom styles
+   ========================================================================== */
+div#home {
+    padding-top: 35px;
+    height: 686px;
+}
+div#home div#video {
+    min-width: 978px;  
+    max-width: 1280px;  
+    margin: auto;
+}
+div#home div#video img{
+    display: none;
+    width: 100%;
+}
+div#home div#video video.video-bg{
+    width: 100%;
+    max-height: 686px;
+}
+div#home div#video .video-texture{
+    width: 100%;
+    background-image: url(/assets/img/home/scanlines.png);
+    position: relative;
+    top: -686px;
+    height: 686px;
+}
+
+div.section {
+    width: 100%;
+    height: 2000px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+div.section .content {
+    width: 978px;  
+    margin: auto;
+}
+div#marcus.section { background-image: url(/assets/img/home/marcus/bg.jpg); }
+div#mikey.section { background-image: url(/assets/img/home/mikey/bg.jpg); }
+div#axe.section { background-image: url(/assets/img/home/axe/bg.jpg); }
+div#dietz.section { background-image: url(/assets/img/home/dietz/bg.jpg); }
+div#tribute.section { 
+    background-image: url(/assets/img/home/tribute/bg.jpg); 
+    height: 2250px;
+}
+
+.blocktext {
+    padding-left: 12px;
+    padding-right: 12px;
+    margin: 0px;
+    background-color: #333;
+}
+.title1 {
+    font-size: 36px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 36px;
+}
+.title2 {
+    color: #fff;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+}
+.title3 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 17px;    
+}
+.bodycopy {
+    color: #999;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+/* ==========================================================================
+   character custom styles
+   ========================================================================== */
+.section .container {
+    position: relative;
+    min-height: 200px;
+}
+/* top quote */
+.quote-top {
+    position: absolute;
+    width: 978px;
+    overflow: hidden;
+}
+.quote-top-img {
+    position: relative;
+}
+/* job */
+.job {
+    position: absolute;
+    width: 978px;
+    overflow: hidden;
+}
+.job .icon {
+    margin-bottom: 10px;
+    margin-left: 12px;
+    display: block;
+}
+.job .title2 {
+    background-color: #333;
+}
+.job .bodycopy {  
+    background-color: #333;
+}
+/* bio */
+.bio {
+    position: absolute;
+    width: 978px;
+    overflow: hidden;
+    color: #c9c9c9;
+}
+.bio .container {
+    padding-left: 174px;
+    padding-top: 5px;
+}
+.bio .bodycopy {  
+    background-color: #000;
+    float: left;
+    clear: both;
+}
+.bio .title1 {  
+    background-color: #000;
+    float: left;
+    clear: both;
+}
+.bio .title3 {  
+    background-color: #000;
+    float: left;
+    clear: both;
+}
+.bio .role {  
+    float: left;
+    clear: both;
+}
+/* bottom quote */
+.quote-bot {
+    position: absolute;
+    width: 978px;
+    overflow: hidden;
+}
+.quote-bot .container img {
+    position: absolute;
+}
+
+/* ==========================================================================
+   marcus custom styles
+   ========================================================================== */
+/* top quote */
+#marcus .quote-top {
+    top: @homeheight + 368;
+}
+#marcus .quote-top-img {
+    left: 21px;
+}
+/* job */
+#marcus .job {
+    top: @homeheight + 695;
+}
+#marcus .job .container {
+    left: 360px;
+}
+#marcus .job .bodycopy {
+    width: 315px;
+}
+/* bio */
+#marcus .bio {
+    top: @homeheight + 998;
+}
+#marcus .bio .container {
+    left: 0px;
+    background-image: url(/assets/img/home/marcus/bio-img.png);
+    background-repeat: no-repeat;
+}
+#marcus .bio .bodycopy {
+    width: 493px;
+}
+#marcus .bio .role {  
+    padding-left: 100px;
+}
+/* bottom quote */
+#marcus .quote-bot {
+    top: @homeheight + 1419;  
+}
+#marcus .quote-bot .container {
+    left: 0px;
+    height: 270px;
+}
+#marcus .quote-bot-text-img {
+    top: 0px;
+    left: 0px;
+}
+#marcus .quote-bot-img {
+    top: 115px;
+    left: 181px;
+}
+/* ==========================================================================
+   mikey custom styles
+   ========================================================================== */
+/* top quote */
+#mikey .quote-top {
+    top: @homeheight + 2300;
+}
+#mikey .quote-top-img {
+    left: 72px;
+}
+/* job */
+#mikey .job {
+    top: @homeheight + 2669;
+}
+#mikey .job .container {
+    left: 0px;
+}
+#mikey .job .bodycopy {
+    width: 268px;
+}
+/* bio */
+#mikey .bio {
+    top: @homeheight + 3017;
+}
+#mikey .bio .container {
+    left: 0px;
+    background-image: url(/assets/img/home/mikey/bio-img.png);
+    background-repeat: no-repeat;
+}
+#mikey .bio .bodycopy {
+    width: 532px;
+}
+#mikey .bio .role {  
+    padding-left: 100px;
+}
+/* bottom quote */
+#mikey .quote-bot {
+    top: @homeheight + 3610;  
+}
+#mikey .quote-bot .container {
+    left: 174px;
+    height: 270px;
+}
+#mikey .quote-bot-text-img {
+    top: 0px;
+    left: 0px;
+}
+#mikey .quote-bot-img {
+    top: 86px;
+    left: 229px;
+}
+/* ==========================================================================
+   axe custom styles
+   ========================================================================== */
+/* top quote */
+#axe .quote-top {
+    top: @homeheight + 4319;
+}
+#axe .quote-top-img {
+    left: 24px;
+}
+/* job */
+#axe .job {
+    top: @homeheight + 4649;
+}
+#axe .job .container {
+    left: 0px;
+}
+#axe .job .bodycopy {
+    width: 268px;
+}
+/* bio */
+#axe .bio {
+    top: @homeheight + 4967;
+}
+#axe .bio .container {
+    left: 0px;
+    background-image: url(/assets/img/home/axe/bio-img.png);
+    background-repeat: no-repeat;
+}
+#axe .bio .bodycopy {
+    width: 532px;
+}
+#axe .bio .role {  
+    margin-left: -125px;
+}
+/* bottom quote */
+#axe .quote-bot {
+    top: @homeheight + 5560;  
+}
+#axe .quote-bot .container {
+    left: 0px;
+    height: 270px;
+}
+#axe .quote-bot-text-img {
+    top: 0px;
+    left: 0px;
+}
+#axe .quote-bot-img {
+    top: 106px;
+    left: 197px;
+}
+/* ==========================================================================
+   dietz custom styles
+   ========================================================================== */
+/* top quote */
+#dietz .quote-top {
+    top: @homeheight + 6317;
+}
+#dietz .quote-top-img {
+    left: 21px;
+}
+/* job */
+#dietz .job {
+    top: @homeheight + 6661;
+}
+#dietz .job .container {
+    left: 0px;
+}
+#dietz .job .bodycopy {
+    width: 268px;
+}
+/* bio */
+#dietz .bio {
+    top: @homeheight + 6999;
+}
+#dietz .bio .container {
+    left: 0px;
+    background-image: url(/assets/img/home/dietz/bio-img.png);
+    background-repeat: no-repeat;
+}
+#dietz .bio .bodycopy {
+    width: 532px;
+}
+#dietz .bio .role {  
+    padding-left: 16px;
+}
+/* bottom quote */
+#dietz .quote-bot {
+    top: @homeheight + 7606;  
+}
+#dietz .quote-bot .container {
+    left: 0px;
+    height: 270px;
+}
+#dietz .quote-bot-text-img {
+    top: 0px;
+    left: 0px;
+}
+#dietz .quote-bot-img {
+    top: 89px;
+    left: 355px;
+}
+/* ==========================================================================
+   tribute custom styles
+   ========================================================================== */
+#tribute .quote-image {
+    position: absolute;
+    top: @homeheight + 8340;
+    left: 0px;
+}
+#tribute .blocktext {
+    background-color: #000;
+    color: #fff;
+    float: left;
+    clear: both;
+}
+#tribute .seal {
+    height: 224px;
+}
+.seal .container {
+    background-repeat: no-repeat;
+    padding-left: 275px;
+    padding-top: 26px;
+    left: 81px;
+}
+#tribute .seals {
+    position: absolute;
+    top: @homeheight + 8594;
+    width: 978px;
+    overflow: hidden;
+    color: #c9c9c9;
+}
+#tribute .marcus .container {
+    background-image: url(/assets/img/home/tribute/marcus.png);
+}
+#tribute .mikey .container {
+    background-image: url(/assets/img/home/tribute/mikey.png);
+}
+#tribute .axe .container {
+    background-image: url(/assets/img/home/tribute/axe.png);
+}
+#tribute .dietz .container {
+    background-image: url(/assets/img/home/tribute/dietz.png);
+}
+#tribute .seal .team {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    opacity: .8;
+    width: 282px;
+    text-align: center;
+    display: block;
+    margin-left: -275px;
+    margin-top: 146px;
+}
+
+#tribute .honor {
+	width: 678px;
+	position: absolute;
+	top: @homeheight + 9584;
+	text-align: center;
+    padding-right: 300px;
+}
+#tribute .honor-title {
+    color: #fff;
+    font-size: 24px;
+}
+#tribute .honor-subtitle {
+    color: #fff;
+    font-size: 22px;
+}
+#tribute .flag-image {
+    background-image: url(/assets/img/home/tribute/flag.png);
+    margin-top: 38px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#tribute .honor-column{
+    float: left;
+    width: 226px;
+    margin-top: 38px;
+}
+#tribute .honor-name-title{
+    display: block;
+    font-size: 18px;
+    color: #fff;
+    opacity: .9;
+}
+#tribute .honor-rank{
+    display: block;
+    font-weight: 200;
+    color: #fff;
+    font-size: 14px;
+    padding-bottom: 28px;
+    opacity: .9;
+}

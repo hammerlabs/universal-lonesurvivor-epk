@@ -15,7 +15,7 @@ $_environments_list = array(
 	 * development urls
 	 */
 	'development' => array(
-		'starter.local.dev',
+		'.local',
 		'.hammerlabs.com',
 		'.localdomain'
 	),

@@ -1,19 +1,407 @@
-
-body {
-	background-color: #acb55e;
-}
-
-/*We don't want iPad to highlight clicks */
 * {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
-
-/*We need to force iPad browser to use hardware acceleration*/
-.main-container * {
-    -webkit-transform: translate3d(0,0,0);  
-}
-
 .hide {
-    display: none;
+  display: none;
 }
-
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+body {
+  font-size: 1em;
+  line-height: 1.4;
+}
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+img {
+  vertical-align: middle;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+textarea {
+  resize: vertical;
+}
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+body {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  color: #c2b8af;
+  min-width: 978px;
+  background-color: #000;
+}
+a {
+  color: #c2b8af;
+  text-decoration: none;
+}
+input {
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+}
+*:focus {
+  outline: none;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.share-tech {
+  font-family: 'Share Tech', sans-serif;
+}
+.wrapper {
+  position: fixed;
+  background-color: rgba(0,0,0,0.8);
+  width: 100%;
+}
+.wrapper .content {
+  min-width: 978px;
+  max-width: 1280px;
+  width: 100%;
+  margin: auto;
+}
+.wrapper .content .right {
+  margin-right: 20px;
+}
+.wrapper .content .left {
+  margin-left: 20px;
+}
+.wrapper.head {
+  top: 0px;
+}
+.wrapper.head .content {
+  height: 30px;
+  margin-top: 5px;
+}
+.wrapper.head .content .right {
+  margin-top: -5px;
+}
+#hashtag {
+  color: #fff;
+  font-size: 16px;
+  margin-top: auto;
+  position: relative;
+  top: -3px;
+  left: -14px;
+}
+#facebook-btn {
+  background: url(/assets/img/nav/facebook-off.png);
+}
+#facebook-btn:hover {
+  background: url(/assets/img/nav/facebook-on.png);
+}
+#twitter-btn {
+  background: url(/assets/img/nav/twitter-off.png);
+}
+#twitter-btn:hover {
+  background: url(/assets/img/nav/twitter-on.png);
+}
+#google-btn {
+  background: url(/assets/img/nav/google-off.png);
+}
+#google-btn:hover {
+  background: url(/assets/img/nav/google-on.png);
+}
+#tumblr-btn {
+  background: url(/assets/img/nav/tumblr-off.png);
+}
+#tumblr-btn:hover {
+  background: url(/assets/img/nav/tumblr-on.png);
+}
+#instagram-btn {
+  background: url(/assets/img/nav/instagram-off.png);
+}
+#instagram-btn:hover {
+  background: url(/assets/img/nav/instagram-on.png);
+}
+#youtube-btn {
+  background: url(/assets/img/nav/youtube-off.png);
+}
+#youtube-btn:hover {
+  background: url(/assets/img/nav/youtube-on.png);
+}
+.share-btn {
+  display: inline-block;
+  margin-top: 7px;
+  margin-right: 2px;
+  width: 20px;
+  height: 20px;
+}
+.share-btn-last {
+  margin-right: 12px;
+}
+.audio-control {
+  background: url(/assets/img/nav/sound-on.png);
+  width: 24px;
+  height: 23px;
+  display: inline-block;
+}
+.audio-control.off {
+  background: url(/assets/img/nav/sound-off.png);
+  width: 24px;
+  height: 23px;
+  display: inline-block;
+}
+.wrapper.foot {
+  bottom: 0px;
+}
+.wrapper.foot .content {
+  height: 53px;
+  margin-top: 11px;
+  font-size: 8px;
+  font-family: Helvetica, sans-serif;
+}
+.wrapper.foot .content div {
+  display: inline-block;
+}
+.wrapper.foot .content .left div {
+  position: relative;
+  top: 8px;
+}
+.wrapper.foot .content .eff_logo {
+  margin-left: 19px;
+  margin-right: 14px;
+}
+.wrapper.foot .content .rating {
+  margin-right: 10px;
+}
+.ui-fixed {
+  position: fixed;
+  top: 38px;
+  width: 100%;
+  pointer-events: none;
+}
+.ui-fixed .content {
+  min-width: 978px;
+  max-width: 1280px;
+  width: 100%;
+  margin: auto;
+}
+.ui-fixed .content .right {
+  margin-right: 20px;
+}
+.ui-fixed .content .left {
+  margin-left: 20px;
+}
+#logo {
+  background-color: rgba(0,0,0,0.8);
+  background-image: url(/assets/img/nav/logo-bg.png);
+  background-repeat: no-repeat;
+  background-position: 6px 127px;
+  width: 294px;
+  height: 118px;
+  text-align: center;
+  padding-top: 20px;
+  float: right;
+  clear: both;
+  pointer-events: auto;
+}
+#logo img {
+  padding-bottom: 8px;
+}
+#site-title {
+  width: 254px;
+  height: 82px;
+  background: url(/assets/img/nav/logo.png) no-repeat;
+  margin: auto;
+}
+#showtimes-wrapper {
+  margin-top: 3px;
+  background-image: url(/assets/img/nav/tickets-bg.png);
+  background-repeat: no-repeat;
+  background-position: 10px 1px;
+  width: 360px;
+  height: 103px;
+  text-align: right;
+  float: right;
+  clear: both;
+  pointer-events: auto;
+}
+#showtimes {
+  background-color: rgba(0,0,0,0.8);
+  background-image: url(/assets/img/nav/tickets-bg-2.png);
+  background-repeat: no-repeat;
+  background-position: 6px 93px;
+  width: 294px;
+  height: 83px;
+  padding-top: 20px;
+  text-align: center;
+  float: right;
+}
+.tickets-text {
+  color: #fff;
+}
+#showtimes input {
+  border: 1px solid #544e49;
+  border-radius: 3px;
+  background: #000;
+  width: 115px;
+  height: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+#showtimes::-webkit-input-placeholder {
+  color: #999999;
+}
+#showtimes::-moz-placeholder {
+  color: #999999;
+}
+#showtimes:-ms-input-placeholder {
+  color: #999999;
+}
+#showtimes:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+#showtimes:focus::-moz-placeholder {
+  color: transparent;
+}
+#showtimes:focus:-ms-input-placeholder {
+  color: transparent;
+}
+#showtimes a {
+  width: 115px;
+  height: 25px;
+  color: #c2b8af;
+  display: inline-block;
+  text-align: left;
+  padding-top: 4px;
+  padding-left: 11px;
+}
+#showtimes a:hover {
+  color: #fff;
+}
+#showtimes a.fandango {
+  background: url(/assets/img/nav/fandango.png);
+}
+#showtimes a.movietickets {
+  background: url(/assets/img/nav/movietickets.png);
+}
+#nav-wrapper {
+  margin-top: 3px;
+  background-image: url(/assets/img/nav/nav-bg.png);
+  background-repeat: no-repeat;
+  background-position: 8px 4px;
+  width: 220px;
+  height: 181px;
+  text-align: right;
+  float: right;
+  clear: both;
+  pointer-events: auto;
+}
+#nav {
+  background-color: rgba(0,0,0,0.8);
+  background-image: url(/assets/img/nav/nav-bg-2.png);
+  background-repeat: no-repeat;
+  background-position: 6px 171px;
+  width: 164px;
+  height: 157px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  float: right;
+  clear: both;
+}
+#nav a:hover {
+  background-color: #504d4a;
+  color: #fff;
+}
+#nav a {
+  width: 144px;
+  height: 25px;
+  display: inline-block;
+  text-align: right;
+  padding-right: 20px;
+  padding-top: 5px;
+  margin-bottom: 1px;
+}
+#flag_link:hover {
+  background: url(/assets/img/nav/flag-bg-over.png);
+  color: #fff;
+  pointer-events: auto;
+}
+#flag_link {
+  margin-top: 3px;
+  background: url(/assets/img/nav/flag-bg.png);
+  width: 146px;
+  height: 57px;
+  text-align: right;
+  float: right;
+  clear: both;
+  padding-top: 17px;
+  padding-right: 19px;
+  pointer-events: auto;
+}
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px;
+}
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+.invisible {
+  visibility: hidden;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
