@@ -2,7 +2,9 @@
     $CI =& get_instance(); 
 	$CI->_add_css("css/main.css","head");
 	$CI->_add_css("css/home.css","head");
+	$CI->_add_css("css/gallery.css","head");
 	$CI->_add_js("js/main.js","footer");
+	$CI->_add_js("js/gallery.js","footer");
 ?>
 
         <div class="main-container hide">
@@ -228,11 +230,11 @@
 	                </div>
 	                <div id="nav-wrapper">
 	                    <div id="nav">
-	                        <a href="#">STORY</a>
-	                        <a href="#">VIDEOS</a>
-	                        <a href="#">GALLERY</a>
-	                        <a href="#">PRODUCTION NOTES</a>
-	                        <a href="#">SUPPORT OUR HEROES</a>
+	                        <a id="nav_story" href="#">STORY</a>
+	                        <a id="nav_videos" href="#">VIDEOS</a>
+	                        <a id="nav_gallery" href="#">GALLERY</a>
+	                        <a id="nav_prodnotes" href="#">PRODUCTION NOTES</a>
+	                        <a id="nav_support" href="#">SUPPORT OUR HEROES</a>
 	                    </div>
 	                </div>
 	                <a id="flag_link" href="#"> FLAG OF<br />OUR HEROES</a>
@@ -240,6 +242,17 @@
 	            <div class="left">
 	            </div>
 	        </div>
+	    </div>
+	    <div class="gallery hide">
+            <?php echo $gallery_photos; ?>
+	    	<img class="arrow left" src="assets/img/gallery/arrow_left.png">
+	    	<img class="arrow right" src="assets/img/gallery/arrow_right.png">
+	    	<img class="close" src="assets/img/gallery/close.png">
+	    	<div class="thumbs">
+		    	<img class="thumbarrow left" src="assets/img/gallery/arrow_left.png">
+		    	<img class="thumbarrow right" src="assets/img/gallery/arrow_right.png">
+		    	<div class="thumb-pages"></div>
+	    	</div>
 	    </div>
 	    <div class="wrapper head hide">
 	        <div class="content">

@@ -12,6 +12,11 @@ class Main extends HLabs_Controller {
 		$urlinfo=getUrl();
 		$releaseDateInfo=getReleaseDateInfo($urlinfo);
 		
+		$gallery_photos=$this->readimages->preloadFromFolder("/assets/img/gallery/photos","photo transparent");
+		$data["gallery_photos"]=$gallery_photos;
+		$gallery_thumbs=$this->readimages->preloadFromFolder("/assets/img/gallery/thumbs","hide");
+		$data["gallery_thumbs"]=$gallery_thumbs;
+
 		$data["ua"] = $ua;
 		$data["title"] = $this->config->item( 'title' );
 		$data["desc"] = $this->config->item( 'desc' );

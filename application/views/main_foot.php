@@ -1,5 +1,6 @@
 
             <div class="main_preloads hide">
+            <?php echo $gallery_thumbs; ?>
             </div>
 
 

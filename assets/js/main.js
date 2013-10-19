@@ -114,6 +114,11 @@
     	TweenLite.from($( "#nav-wrapper" ).show(), .4, {marginRight:-300, opacity:0, delay: 1.4});
     	TweenLite.from($( "#flag_link" ).show(), .4, {marginRight:-300, opacity:0, delay: 1.6});
     	TweenLite.to($( ".main-container" ), 1, {opacity:1, delay: 2});
+
+    	// found in gallery.js
+    	initGallery();
+	    //Click event bindings
+
 	/* ==========================================================================
 	   add movie ticket look up feature
 	   ========================================================================== */

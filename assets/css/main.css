@@ -411,6 +411,9 @@ input {
 .clearfix {
   *zoom: 1;
 }
+.transparent {
+  opacity: 0;
+}
 #status {
   height: 20px;
   position: fixed;

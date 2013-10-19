@@ -1,0 +1,94 @@
+.gallery {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+
+	img.photo {
+		width: 100%;
+		max-width: 3600px;
+		max-height: 1479px;
+		transition: opacity 0.2s ease-in-out;
+		position: absolute;
+		top: 0px;
+	}
+
+	.arrow {
+		position: fixed;
+		cursor: pointer;
+		opacity: .5;
+		top: 50%;
+		margin-top: -51px;
+		transition: opacity 0.2s ease-in-out;
+	}
+
+	.arrow.left {
+		float: none;
+		left: 10px;
+	}
+	.arrow.right {
+		float: none;
+		right: 10px;
+	}
+
+	.close {
+		position: fixed;
+		right: 10px;
+		top: 45px;
+		cursor: pointer;
+		opacity: .5;
+		transition: opacity 0.2s ease-in-out;
+	}
+
+	.arrow:hover, .close:hover {
+		opacity: 1;
+		transition: opacity 0.2s ease-in-out;
+	}
+
+	.thumbs {
+		width: 978px;
+		height: 66px;
+		position: fixed;
+		bottom: 85px;
+		margin-left: 50%;
+		left: -489px;
+		text-align: center;
+		overflow: hidden;
+		cursor: pointer;
+		
+		.thumb-pages {
+			width: 10000px;
+			text-align: left;
+		}
+
+		.thumb-page {
+			margin: 0px 129px 0px 129px;
+		}
+		.thumb {
+			width: 160px;
+			margin: 0px 10px 0px 10px;
+		}
+		.thumbarrow {
+			width: 30px;
+			position: absolute;
+			cursor: pointer;
+			opacity: .5;
+			top: 50%;
+			margin-top: -25px;
+			transition: opacity 0.2s ease-in-out;
+		}
+		.thumbarrow:hover {
+			opacity: 1;
+			transition: opacity 0.2s ease-in-out;
+		}
+		.thumbarrow.left {
+			float: none;
+			left: 10px;
+		}
+		.thumbarrow.right {
+			float: none;
+			right: 10px;
+		}
+	}
+}
