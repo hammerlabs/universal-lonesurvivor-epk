@@ -9,7 +9,7 @@
 		width: 100%;
 		max-width: 3600px;
 		max-height: 1479px;
-		transition: opacity 0.2s ease-in-out;
+		transition: opacity 0.4s ease-in-out;
 		position: absolute;
 		top: 0px;
 	}
@@ -17,38 +17,29 @@
 	.arrow {
 		position: fixed;
 		cursor: pointer;
-		opacity: .5;
 		top: 50%;
 		margin-top: -51px;
-		transition: opacity 0.2s ease-in-out;
 	}
 
 	.arrow.left {
 		float: none;
-		left: 10px;
+		left: 42px;
 	}
 	.arrow.right {
 		float: none;
-		right: 10px;
+		right: 42px;
 	}
 
 	.close {
 		position: fixed;
-		right: 10px;
-		top: 45px;
+		right: 40px;
+		top: 64px;
 		cursor: pointer;
-		opacity: .5;
-		transition: opacity 0.2s ease-in-out;
-	}
-
-	.arrow:hover, .close:hover {
-		opacity: 1;
-		transition: opacity 0.2s ease-in-out;
 	}
 
 	.thumbs {
 		width: 978px;
-		height: 66px;
+		height: 80px;
 		position: fixed;
 		bottom: 85px;
 		margin-left: 50%;
@@ -65,30 +56,43 @@
 		.thumb-page {
 			margin: 0px 129px 0px 129px;
 		}
+		.thumb-holder {
+			width: 174px;
+			margin: 0px 3px 0px 3px;
+			display: inline-block;
+		}
+		.thumb-holder.selected {
+			background-image: url(/assets/img/gallery/selected-thumb.png);
+		}
 		.thumb {
 			width: 160px;
-			margin: 0px 10px 0px 10px;
+			margin: 7px 7px;
 		}
-		.thumbarrow {
-			width: 30px;
-			position: absolute;
+		.thumbarrow_box {
+			width: 40px;
+			height: 40px;
+			background-color: #000;
+			text-align: center;
 			cursor: pointer;
-			opacity: .5;
+			position: absolute;
 			top: 50%;
-			margin-top: -25px;
-			transition: opacity 0.2s ease-in-out;
+			margin-top: -20px;
 		}
-		.thumbarrow:hover {
-			opacity: 1;
-			transition: opacity 0.2s ease-in-out;
-		}
-		.thumbarrow.left {
+		.thumbarrow_box.left {
 			float: none;
 			left: 10px;
 		}
-		.thumbarrow.right {
+		.thumbarrow_box.right {
 			float: none;
 			right: 10px;
+		}
+		.thumbarrow {
+			width: 12px;
+			position: absolute;
+			top: 50%;
+			margin-top: -10px;
+			left: 50%;
+			margin-left: -6px;
 		}
 	}
 }

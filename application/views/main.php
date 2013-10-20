@@ -249,8 +249,8 @@
 	    	<img class="arrow right" src="assets/img/gallery/arrow_right.png">
 	    	<img class="close" src="assets/img/gallery/close.png">
 	    	<div class="thumbs">
-		    	<img class="thumbarrow left" src="assets/img/gallery/arrow_left.png">
-		    	<img class="thumbarrow right" src="assets/img/gallery/arrow_right.png">
+                <div class="thumbarrow_box left"><img class="thumbarrow" src="assets/img/gallery/arrow_left.png"></div>
+                <div class="thumbarrow_box right"><img class="thumbarrow" src="assets/img/gallery/arrow_right.png"></div>
 		    	<div class="thumb-pages"></div>
 	    	</div>
 	    </div>

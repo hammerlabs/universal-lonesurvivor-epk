@@ -27,31 +27,24 @@ function synchThumbsToPhotos() {
 }
 
 function galleryPrev() {
-	$( $(".gallery img.photo")[window.galleryIndex] ).toggleClass('transparent');
-	window.galleryIndex--;
-	if (window.galleryIndex < 0) {
-		window.galleryIndex = window.galleryLength - 1;
-	}
-	$( $(".gallery img.photo")[window.galleryIndex] ).toggleClass('transparent');
-	synchThumbsToPhotos();
-	console.log("index", window.galleryIndex);
+	gotoPhoto(window.galleryIndex - 1);
 }
 
 function galleryNext() {
-	$( $(".gallery img.photo")[window.galleryIndex] ).toggleClass('transparent');
-	window.galleryIndex++;
-	if (window.galleryIndex >= window.galleryLength) {
-		window.galleryIndex = 0;
-	}
-	$( $(".gallery img.photo")[window.galleryIndex] ).toggleClass('transparent');
-	synchThumbsToPhotos();
-	console.log("index", window.galleryIndex);
+	gotoPhoto(window.galleryIndex + 1);
 }
 
 function gotoPhoto(index) {
 	$( $(".gallery img.photo")[window.galleryIndex] ).toggleClass('transparent');
+	$(".thumb-holder.p" + window.galleryIndex).removeClass('selected');
 	window.galleryIndex = index;
+	if (window.galleryIndex >= window.galleryLength) {
+		window.galleryIndex = 0;
+	} else if (window.galleryIndex < 0) {
+		window.galleryIndex = window.galleryLength - 1;
+	}
 	$( $(".gallery img.photo")[window.galleryIndex] ).toggleClass('transparent');
+	$(".thumb-holder.p" + window.galleryIndex).addClass('selected');
 	synchThumbsToPhotos();
 	console.log("index", window.galleryIndex);
 }
@@ -90,7 +83,7 @@ function initGallery() {
 		}
 		$(val)[0].id = "p" + index;
 		var thumbSrc = $(val)[0].src.replace("/photos/", "/thumbs/");
-		thumbContent += '<img class="thumb p'+ index +'" data-index="' + index + '" src="'+ thumbSrc +'" />';
+		thumbContent += '<span class="thumb-holder p' + index + '"><img class="thumb p'+ index +'" data-index="' + index + '" src="'+ thumbSrc +'" /></span>';
 		thumbsInCurrentPage++;
 		if (thumbsInCurrentPage == window.thumbsPerPage || index == (window.galleryLength - 1)) {
 			thumbsInCurrentPage = 0;
@@ -99,10 +92,11 @@ function initGallery() {
 		}
 	});
 	$(".gallery .thumb-pages").append(thumbContent);
-	$(".gallery .thumbarrow.left").on("click",function(e){
+	$(".thumb-holder.p" + window.galleryIndex).addClass('selected');
+	$(".gallery .thumbarrow_box.left").on("click",function(e){
 		galleryThumbPrev();
 	});
-	$(".gallery .thumbarrow.right").on("click",function(e){
+	$(".gallery .thumbarrow_box.right").on("click",function(e){
 		galleryThumbNext();
 	});
 	$(".gallery .thumb").on("click",function(e){
