@@ -41,6 +41,7 @@ class Main extends HLabs_Controller {
         $this->_add_js("js/libs/TweenMax.min.js","footer");
         $this->_add_js("js/libs/jquery.touchSwipe.js","footer");
         $this->_add_js("js/libs/skrollr.js","footer");
+        $this->_add_js("js/libs/jquery.fitvids.js","footer");
         //$this->_add_js("js/libs/jquery.parallax.js","footer");
 		//$this->_add_js("js/libs/binaryajax.js","footer");
 		//$this->_add_js("js/libs/exif.js","footer");

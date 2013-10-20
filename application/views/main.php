@@ -1,7 +1,8 @@
 <?php
     $CI =& get_instance(); 
 	$CI->_add_css("css/main.css","head");
-	$CI->_add_css("css/home.css","head");
+    $CI->_add_css("css/video_playlist.css","head");
+    $CI->_add_css("css/home.css","head");
 	$CI->_add_css("css/gallery.css","head");
 	$CI->_add_js("js/main.js","footer");
 	$CI->_add_js("js/gallery.js","footer");
@@ -243,17 +244,21 @@
 	            </div>
 	        </div>
 	    </div>
-	    <div class="gallery hide">
+        <div class="gallery hide">
             <?php echo $gallery_photos; ?>
-	    	<img class="arrow left" src="assets/img/gallery/arrow_left.png">
-	    	<img class="arrow right" src="assets/img/gallery/arrow_right.png">
-	    	<img class="close" src="assets/img/gallery/close.png">
-	    	<div class="thumbs">
+            <img class="arrow left" src="assets/img/gallery/arrow_left.png">
+            <img class="arrow right" src="assets/img/gallery/arrow_right.png">
+            <img class="close" src="assets/img/gallery/close.png">
+            <div class="thumbs">
                 <div class="thumbarrow_box left"><img class="thumbarrow" src="assets/img/gallery/arrow_left.png"></div>
                 <div class="thumbarrow_box right"><img class="thumbarrow" src="assets/img/gallery/arrow_right.png"></div>
-		    	<div class="thumb-pages"></div>
-	    	</div>
-	    </div>
+                <div class="thumb-pages"></div>
+            </div>
+        </div>
+        <div class="video_playlist hide">
+            <iframe src="" frameborder="0" allowfullscreen></iframe>
+            <img class="close" src="assets/img/gallery/close.png">
+        </div>
 	    <div class="wrapper head hide">
 	        <div class="content">
 	            <div class="left">

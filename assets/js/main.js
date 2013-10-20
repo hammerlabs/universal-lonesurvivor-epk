@@ -118,6 +118,19 @@
     	// found in gallery.js
     	initGallery();
 	    //Click event bindings
+		$("#nav_videos").on("click",function(e){
+			$(".ui-fixed").fadeToggle();
+			$(".main-container").fadeToggle();
+			$(".video_playlist").fadeToggle();
+			$(".video_playlist iframe").attr("src", "//www.youtube.com/embed/videoseries?list=PLuq_rgCzEP_MpPbSdaxTrDxG-QdplZ4jn&autoplay=1&modestbranding=1");
+			$(".video_playlist").fitVids();
+		});
+		$(".video_playlist .close").on("click",function(e){
+			$(".ui-fixed").fadeToggle();
+			$(".main-container").fadeToggle();
+			$(".video_playlist").fadeToggle();
+			$(".video_playlist iframe").attr("src", "");
+		});
 
 	/* ==========================================================================
 	   add movie ticket look up feature
