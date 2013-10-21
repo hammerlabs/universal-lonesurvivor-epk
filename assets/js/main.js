@@ -8,10 +8,6 @@
 	        return;
 	    }
 	}
-	$(document).scroll(function(e){
-	    $('#status').html($(window).scrollTop());
-	});
-
 
 	window.isiPad = navigator.userAgent.match(/iPad/i) != null;
 
@@ -105,6 +101,18 @@
 
 	}
 
+	function clickScrollIndicator(index) {
+		console.log("clicked box",index);
+		var targetScroll = window.scrollDest[index];
+		var curScroll = $(window).scrollTop();
+		var scrollDiff = targetScroll - curScroll;
+		var duration = Math.abs(scrollDiff / 1000);
+		window.clickToScrollOn = true;
+
+	   	TweenLite.to($( ".white_box" ), duration, {top:50*index + "px"});
+    	TweenLite.to(window, duration, {scrollTo:{y:targetScroll}, onComplete:function() {window.clickToScrollOn=false;}});
+	}
+
 	function siteReady(){
     	TweenLite.from($( ".wrapper.head" ).show(), 1, {top:-100});
     	TweenLite.from($( ".wrapper.foot" ).show(), 1, {bottom:-100});
@@ -117,7 +125,7 @@
 
     	// found in gallery.js
     	initGallery();
-	    //Click event bindings
+	    // video playlist events
 		$("#nav_videos").on("click",function(e){
 			$(".ui-fixed").fadeToggle();
 			$(".main-container").fadeToggle();
@@ -130,6 +138,33 @@
 			$(".main-container").fadeToggle();
 			$(".video_playlist").fadeToggle();
 			$(".video_playlist iframe").attr("src", "");
+		});
+		// scroll indicator events
+		window.scrollDest = [0, 1120, 3130, 5120, 7115, 8720];
+		window.scrollTest = [0, 680, 2670, 4680, 6700, 8720];
+		window.clickToScrollOn = false;
+		$("tr.indicator_box").on("click",function(e){
+			clickScrollIndicator($(this).data('index'));
+		});
+		$( window ).scroll(function() {
+			var curScroll = $(window).scrollTop();
+		    if (location.host.indexOf(".local")) {
+		    	$('#status').html( curScroll );
+		    }
+		    if (window.clickToScrollOn) return;
+		    var curSectionIndex = 0;
+		    var destSectionIndex = 0;
+			$.each(window.scrollTest, function( index, value ) {
+				if (curScroll <= value) {
+					curSectionIndex = index;
+				} else if (curScroll > value) {
+					destSectionIndex = index;
+				}
+			});
+			if (curSectionIndex != destSectionIndex) {
+			    var duration = Math.abs((destSectionIndex - curSectionIndex) * .1);
+				TweenLite.to($( ".white_box" ), duration, {top:50*destSectionIndex + "px"});
+			}
 		});
 
 	/* ==========================================================================

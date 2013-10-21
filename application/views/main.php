@@ -241,6 +241,29 @@
 	                <a id="flag_link" href="#"> FLAG OF<br />OUR HEROES</a>
 	            </div>
 	            <div class="left">
+                    <div class="indicator">
+                        <div class="slider">
+                            <div class="white_box"></div>
+                            <div class="boxes">
+                                <table>
+                                    <tr class="indicator_box" data-index="0"><td>&nbsp;</td></tr>
+                                    <tr class="indicator_box" data-index="1"><td>&nbsp;</td></tr>
+                                    <tr class="indicator_box" data-index="2"><td>&nbsp;</td></tr>
+                                    <tr class="indicator_box" data-index="3"><td>&nbsp;</td></tr>
+                                    <tr class="indicator_box" data-index="4"><td>&nbsp;</td></tr>
+                                    <tr class="indicator_box" data-index="5"><td>&nbsp;</td></tr>
+                                </table>
+                            </div>
+                            <!--div class="boxes">
+                                <div class="indicator_box" data-index="0">&nbsp;</div>
+                                <div class="indicator_box" data-index="1">&nbsp;</div>
+                                <div class="indicator_box" data-index="2">&nbsp;</div>
+                                <div class="indicator_box" data-index="3">&nbsp;</div>
+                                <div class="indicator_box" data-index="4">&nbsp;</div>
+                                <div class="indicator_box" data-index="5">&nbsp;</div>
+                            </div-->
+                        </div>
+                    </div>
 	            </div>
 	        </div>
 	    </div>
