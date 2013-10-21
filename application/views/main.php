@@ -241,6 +241,13 @@
 	                <a id="flag_link" href="#"> FLAG OF<br />OUR HEROES</a>
 	            </div>
 	            <div class="left">
+                    <div class="social-wrapper">
+                        <div class="social_feeds">
+                            <span class="facebook">FACEBOOK</span>
+                            <span class="twitter">TWITTER</span>
+                            <span class="instagram">INSTAGRAM</span>
+                        </div>
+                    </div>
                     <div class="indicator">
                         <div class="slider">
                             <div class="white_box"></div>
@@ -254,14 +261,6 @@
                                     <tr class="indicator_box" data-index="5"><td>&nbsp;</td></tr>
                                 </table>
                             </div>
-                            <!--div class="boxes">
-                                <div class="indicator_box" data-index="0">&nbsp;</div>
-                                <div class="indicator_box" data-index="1">&nbsp;</div>
-                                <div class="indicator_box" data-index="2">&nbsp;</div>
-                                <div class="indicator_box" data-index="3">&nbsp;</div>
-                                <div class="indicator_box" data-index="4">&nbsp;</div>
-                                <div class="indicator_box" data-index="5">&nbsp;</div>
-                            </div-->
                         </div>
                     </div>
 	            </div>

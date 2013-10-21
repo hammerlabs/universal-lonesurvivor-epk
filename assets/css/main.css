@@ -365,7 +365,7 @@ input {
 .indicator {
   width: 40px;
   height: 310px;
-  background-color: #000;
+  background-color: rgba(0,0,0,0.8);
   background-image: url(/assets/img/home/indicator.png);
   background-position: 30px 10px;
   background-repeat: no-repeat;
@@ -398,6 +398,35 @@ input {
   border: 1px solid #000;
   width: 16px;
   height: 47px;
+}
+.social-wrapper {
+  width: 430px;
+  height: 50px;
+  background-image: url(/assets/img/home/social.png);
+  background-position: 403px 1px;
+  background-repeat: no-repeat;
+}
+.social-wrapper .social_feeds {
+  width: 390px;
+  height: 40px;
+  background-color: rgba(0,0,0,0.8);
+  pointer-events: auto;
+  padding-left: 13px;
+  padding-top: 10px;
+}
+.social-wrapper .social_feeds span {
+  width: 116px;
+  height: 24px;
+  display: inline-block;
+  background-image: url(/assets/img/home/social-bg.jpg);
+  padding-top: 5px;
+  padding-left: 10px;
+  margin-left: -2px;
+  cursor: pointer;
+}
+.social-wrapper .social_feeds span:hover {
+  background-image: url(/assets/img/home/social-bg-on.jpg);
+  color: #fff;
 }
 .ir {
   background-color: transparent;
