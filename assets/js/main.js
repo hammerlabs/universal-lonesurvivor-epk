@@ -166,6 +166,39 @@
 				TweenLite.to($( ".white_box" ), duration, {top:50*destSectionIndex + "px"});
 			}
 		});
+		//social bar events
+		$(".social-wrapper span").on("click",function(e){
+			if ($(this).hasClass('selected')) {
+				// user clicked on selected social button to close the whole panel
+				$(this).removeClass('selected');
+				$(".socialcontent").addClass('hide');
+			} else {
+				// user selected an unselected social button
+				$(".social-wrapper .selected").removeClass('selected');
+				$(this).addClass('selected');
+				$(".socialcontent").removeClass('hide');
+				$(".socialcontent div.socialcontent-wrapper").addClass('hide');
+				if ($(this).hasClass('facebook')) {
+					$(".socialcontent").removeClass('hide');
+					$(".socialcontent div.socialcontent-wrapper.facebook").removeClass('hide');
+				} else if ($(this).hasClass('twitter')) {
+					$(".socialcontent").removeClass('hide');
+					$(".socialcontent div.socialcontent-wrapper.twitter").removeClass('hide');
+				} else if ($(this).hasClass('instagram')) {
+					$(".socialcontent").removeClass('hide');
+					$(".socialcontent div.socialcontent-wrapper.instagram").removeClass('hide');
+				};
+				$(".socialcontent").data('jsp').reinitialise();
+			}
+		});
+		$('.socialcontent').jScrollPane({
+			showArrows: false,
+			horizontalGutter: 10,
+			verticalGutter: 8,
+			mouseWheelSpeed: 50
+		});
+		$(".socialcontent").addClass('hide');
+		$(".socialcontent div.socialcontent-wrapper").addClass('hide');
 
 	/* ==========================================================================
 	   add movie ticket look up feature

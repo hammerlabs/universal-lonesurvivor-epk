@@ -29,6 +29,7 @@ class Main extends HLabs_Controller {
 
 		
 		$this->_add_css("css/normalize.min.css","head");
+		$this->_add_css("css/jquery.jscrollpane.css","head");
         
         $this->_add_js("js/libs/jquery-1.10.1.min.js","head");
         $this->_add_js("js/libs/jquery.queryloader2.js","head");
@@ -43,6 +44,8 @@ class Main extends HLabs_Controller {
         $this->_add_js("js/libs/jquery.touchSwipe.js","footer");
         $this->_add_js("js/libs/skrollr.js","footer");
         $this->_add_js("js/libs/jquery.fitvids.js","footer");
+        $this->_add_js("js/libs/jquery.mousewheel.js","footer");
+        $this->_add_js("js/libs/jquery.jscrollpane.min.js","footer");
         //$this->_add_js("js/libs/jquery.parallax.js","footer");
 		//$this->_add_js("js/libs/binaryajax.js","footer");
 		//$this->_add_js("js/libs/exif.js","footer");

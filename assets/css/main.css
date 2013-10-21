@@ -371,6 +371,8 @@ input {
   background-repeat: no-repeat;
   padding-left: 11px;
   padding-top: 10px;
+  position: absolute;
+  top: 190px;
 }
 .indicator .slider {
   background-color: #504d4a;
@@ -403,8 +405,9 @@ input {
   width: 430px;
   height: 50px;
   background-image: url(/assets/img/home/social.png);
-  background-position: 403px 1px;
+  background-position: 405px 2px;
   background-repeat: no-repeat;
+  position: absolute;
 }
 .social-wrapper .social_feeds {
   width: 390px;
@@ -414,19 +417,65 @@ input {
   padding-left: 13px;
   padding-top: 10px;
 }
-.social-wrapper .social_feeds span {
+.social-wrapper .social_feeds span.socialbutton {
   width: 116px;
   height: 24px;
   display: inline-block;
-  background-image: url(/assets/img/home/social-bg.jpg);
+  background-image: url(/assets/img/home/social-bg-generic.jpg);
+  background-color: #181717;
   padding-top: 5px;
   padding-left: 10px;
   margin-left: -2px;
   cursor: pointer;
 }
-.social-wrapper .social_feeds span:hover {
-  background-image: url(/assets/img/home/social-bg-on.jpg);
+.social-wrapper .social_feeds span.socialbutton span {
+  float: right;
+  width: 8px;
+  height: 8px;
+  margin-top: 5px;
+  margin-right: 7px;
+  background-image: url(/assets/img/home/social-plus.png);
+}
+.social-wrapper .social_feeds span.socialbutton.selected span {
+  background-image: url(/assets/img/home/social-minus.png);
+}
+.social-wrapper .social_feeds span.socialbutton:hover {
+  background-image: url();
   color: #fff;
+}
+.social-wrapper .social_feeds span.socialbutton.selected {
+  background-image: url();
+  color: #fff;
+}
+.social-wrapper .social_feeds div.socialcontent {
+  width: 360px;
+  height: 280px;
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  position: relative;
+  margin-top: 1px;
+  margin-left: -2px;
+}
+.social-wrapper .social_feeds div.socialcontent div.socialcontent-wrapper {
+  width: 360px;
+  height: 100%;
+}
+.social-wrapper .social_feeds .jspVerticalBar {
+  margin-right: 10px;
+  width: 4px;
+  background: none;
+}
+.social-wrapper .social_feeds .jspDrag {
+  background: #867f79;
+}
+.social-wrapper .social_feeds .jspTrack {
+  background: #2f2d2c;
+}
+.social-wrapper .social_feeds .jspCap {
+  display: block;
+}
+.social-wrapper .social_feeds .jspVerticalBar .jspCap {
+  height: 8px;
 }
 .ir {
   background-color: transparent;
