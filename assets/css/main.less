@@ -530,7 +530,36 @@ input {
     }
 }
 
+/* ==========================================================================
+   preloader classes
+   ========================================================================== */
 
+.loader-container.main-loader .loader {
+    background-image: url(/assets/img/preloader-bg.png);
+    width: 351px;
+    height: 48px;
+    position: fixed;
+    top: 50%;
+    margin-top: -24px;
+    margin-left: -162px;
+    padding-left: 19px;
+    background-repeat: no-repeat;
+
+    span {
+        background-color: #3b3835;
+        width: 49px;
+        height: 14px;
+        display: inline-block;
+        position: relative;
+        top: 17px;
+        margin-left: -2px;
+    }
+}
+
+#qLoverlay {
+    display: none;
+    opacity: 0;
+}
 
 
 
@@ -601,4 +630,4 @@ input {
 	opacity: 0;
 }
 
-#status { height: 20px; position: fixed; color: #f00; top: 0px; right: 10px; display: block; }
+#status { height: 20px; position: fixed; color: #f00; top: 0px; right: 10px; display: none; }

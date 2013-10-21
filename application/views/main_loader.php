@@ -1,7 +1,11 @@
         <div class="loader-container main-loader hide">
-            <div class="screen-bg"></div>            
             <div class="loader">                
-            	<span>This is the loader</span>
+            	<span class="box1">&nbsp;</span>
+            	<span class="box2">&nbsp;</span>
+            	<span class="box3">&nbsp;</span>
+            	<span class="box4">&nbsp;</span>
+            	<span class="box5">&nbsp;</span>
+            	<span class="box6">&nbsp;</span>
             </div>
         </div>
 

@@ -93,8 +93,12 @@
 
 			    },
 			    onProgress:function(percentage){
-			    	//Do something with the percentage of loading that is complete.
-			    	//$(".loader .loading-radar .text").html(percentage);
+			    	if (percentage > 17) $(".loader span.box1").css({background: '#fff'});
+			    	if (percentage > 34) $(".loader span.box2").css({background: '#fff'});
+			    	if (percentage > 50) $(".loader span.box3").css({background: '#fff'});
+			    	if (percentage > 67) $(".loader span.box4").css({background: '#fff'});
+			    	if (percentage > 84) $(".loader span.box5").css({background: '#fff'});
+			    	if (percentage > 99) $(".loader span.box6").css({background: '#fff'});
 			    }
 			}
 		);
