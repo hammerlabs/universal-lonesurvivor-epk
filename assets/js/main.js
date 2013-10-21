@@ -155,6 +155,11 @@
 		    if (location.host.indexOf(".local")) {
 		    	$('#status').html( curScroll );
 		    }
+		    if (curScroll > 1000) {
+		    	$("video.video-bg")[0].pause();
+		    } else {
+		    	$("video.video-bg")[0].play();
+		    }
 		    if (window.clickToScrollOn) return;
 		    var curSectionIndex = 0;
 		    var destSectionIndex = 0;
