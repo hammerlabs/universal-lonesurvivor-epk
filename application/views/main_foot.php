@@ -19,7 +19,7 @@
                                 <a id="nav_videos">VIDEOS</a>
                                 <a id="nav_gallery">GALLERY</a>
                                 <a id="nav_prodnotes">PRODUCTION NOTES</a>
-                                <a id="nav_support" href="#">SUPPORT OUR HEROES</a>
+                                <a id="nav_support" href="/site/charity">SUPPORT OUR HEROES</a>
                             </div>
                         </div>
                         <a id="flag_link" target="_blank" href="http://www.honorflight.org/programs/flags.cfm"> FLAG OF<br />OUR HEROES</a>
