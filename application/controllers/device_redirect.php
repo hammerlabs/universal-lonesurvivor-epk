@@ -6,7 +6,7 @@ class Device_redirect extends CI_Controller {
 		
 		$ua=getBrowser();
 		if ($ua['device_type']=="mobile"){
-			redirect('/mobile');	
+			redirect( $this->config->item( 'mobile_redirect_url' ) );	
 		}
 		else{
 			redirect('/site');	

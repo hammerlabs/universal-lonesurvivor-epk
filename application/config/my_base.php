@@ -17,6 +17,8 @@ $config['check_folders']=array(
 	array("folder"=>"assets/uploadimages","requires_write"=>true)
 );
 
+$config["mobile_redirect_url"] = "/mobile";
+
 //Meta tags, FB tags, etc.
 $config["title"] = "Lone Survivor | Official Movie Site | Universal Pictures"; 
 $config["desc"] = "Based on the failed June 28, 2005 mission, Operation Red Wings. Four members of SEAL Team 10, were tasked with the mission to capture or kill notorious Taliban leader, Ahmad Shahd. Marcus Luttrell was the only member of his team to survive."; 
