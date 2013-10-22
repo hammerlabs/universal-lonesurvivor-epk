@@ -102,8 +102,10 @@
                     <div class="job">
                         <div class="container">
                             <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="icon" data-source="assets/img/home/marcus/medic-icon.png" />
-                            <span class="blocktext title2">NAVY MEDIC</span>
-                            <p class="blocktext bodycopy share-tech">Respectfully referred to as "Doc," Navy Medics are frequently the only medical care-giver available in their unit. In battle, Medics must be ready to perform emergency medical treatment in an active combat environment. Navy Medics receive extensive training in the application of various medical techniques.</p>
+                            <div class="job-content hide">
+                                <span class="blocktext title2">NAVY MEDIC</span>
+                                <p class="blocktext bodycopy share-tech">Respectfully referred to as "Doc," Navy Medics are frequently the only medical care-giver available in their unit. In battle, Medics must be ready to perform emergency medical treatment in an active combat environment. Navy Medics receive extensive training in the application of various medical techniques.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="bio">
@@ -132,8 +134,10 @@
                     <div class="job">
                         <div class="container">
                             <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="icon" data-source="assets/img/home/mikey/team-leader-icon.png" />
-                            <span class="blocktext title2">TEAM LEADER</span>
-                            <p class="blocktext bodycopy share-tech">SEAL Team Leaders must operate at the height of courage and integrity to lead their team. Each team member looks to their Team Leader for final orders. They must often make difficult decisions under extreme pressure in order to ensure the safety of their team.</p>
+                            <div class="job-content hide">
+                                <span class="blocktext title2">TEAM LEADER</span>
+                                <p class="blocktext bodycopy share-tech">SEAL Team Leaders must operate at the height of courage and integrity to lead their team. Each team member looks to their Team Leader for final orders. They must often make difficult decisions under extreme pressure in order to ensure the safety of their team.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="bio">
@@ -162,8 +166,10 @@
                     <div class="job">
                         <div class="container">
                             <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="icon" data-source="assets/img/home/axe/comm-icon.png" />
-                            <span class="blocktext title2">NAVIGATION/SNIPER</span>
-                            <p class="blocktext bodycopy share-tech">Snipers are precision marksmen who must achieve accuracy under various operational conditions. They must possess high proficiency in camouflage and concealment, as well as observation. Snipers also must also be able to accurately analyze wind speed, distance, and other atmospheric conditions.</p>
+                            <div class="job-content hide">
+                                <span class="blocktext title2">NAVIGATION/SNIPER</span>
+                                <p class="blocktext bodycopy share-tech">Snipers are precision marksmen who must achieve accuracy under various operational conditions. They must possess high proficiency in camouflage and concealment, as well as observation. Snipers also must also be able to accurately analyze wind speed, distance, and other atmospheric conditions.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="bio">
@@ -192,8 +198,10 @@
                     <div class="job">
                         <div class="container">
                             <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="icon" data-source="assets/img/home/dietz/sniper-icon.png" />
-                            <span class="blocktext title2">COMMUNICATIONS</span>
-                            <p class="blocktext bodycopy share-tech">Navy SEALs in charge of communications must be able to operate every kind of communication gear. In combat, they will establish and maintain tactical and operational communications. In addition to technical knowledge, they require good eyesight, night vision, and physical conditioning.</p>
+                            <div class="job-content hide">
+                                <span class="blocktext title2">COMMUNICATIONS</span>
+                                <p class="blocktext bodycopy share-tech">Navy SEALs in charge of communications must be able to operate every kind of communication gear. In combat, they will establish and maintain tactical and operational communications. In addition to technical knowledge, they require good eyesight, night vision, and physical conditioning.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="bio">

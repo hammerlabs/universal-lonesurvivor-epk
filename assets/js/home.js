@@ -32,6 +32,12 @@ function initHome() {
 		}
 	});
 
+	$(".job .icon").on("click",function(e){
+		$(this).siblings('.job-content').slideToggle("fast");
+	});
+
+	TweenMax.to($(".job .icon"), 1, {opacity: .5, repeat: -1, yoyo:true});
+
 	window.scroller=skrollr.init({
 		forceHeight: false,
 		smoothScrolling:false,
