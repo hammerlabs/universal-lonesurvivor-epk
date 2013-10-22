@@ -122,6 +122,13 @@
     	$("#nav_prodnotes").on('mouseout', function(e) {
     		$("#nav_prodnotes").html("PRODUCTION NOTES");
     	});
+    	// make logo link to home
+		if (location.pathname != "/site") {
+			$("#logo").on("click",function(e){
+				location.href = "/site";
+			});	
+		}
+
 
 	    // video playlist events
 		$("#nav_videos").on("click",function(e){

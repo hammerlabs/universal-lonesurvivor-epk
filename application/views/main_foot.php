@@ -15,7 +15,7 @@
                         </div>
                         <div id="nav-wrapper">
                             <div id="nav">
-                                <a id="nav_story" href="#">STORY</a>
+                                <a id="nav_story" href="/site/story">STORY</a>
                                 <a id="nav_videos">VIDEOS</a>
                                 <a id="nav_gallery">GALLERY</a>
                                 <a id="nav_prodnotes">PRODUCTION NOTES</a>
