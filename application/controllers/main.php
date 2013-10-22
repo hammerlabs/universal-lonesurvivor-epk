@@ -2,13 +2,16 @@
 
 class Main extends HLabs_Controller {
 	public function index() {
+		$ua=getBrowser();
+		if ($ua['device_type']=="mobile"){
+			redirect( $this->config->item( 'mobile_redirect_url' ) );	
+		}
 
 		$this->load->library("readimages");
 
 
 		$data=array();
 
-		$ua=getBrowser();
 		$urlinfo=getUrl();
 		$releaseDateInfo=getReleaseDateInfo($urlinfo);
 		
@@ -73,10 +76,13 @@ class Main extends HLabs_Controller {
 	}
 
 	public function story() {
+		$ua=getBrowser();
+		if ($ua['device_type']=="mobile"){
+			redirect( $this->config->item( 'mobile_redirect_url' ) );	
+		}
 
 		$data=array();
 
-		$ua=getBrowser();
 		$urlinfo=getUrl();
 		$releaseDateInfo=getReleaseDateInfo($urlinfo);
 		
@@ -125,10 +131,13 @@ class Main extends HLabs_Controller {
 
 
 	public function charity() {
+		$ua=getBrowser();
+		if ($ua['device_type']=="mobile"){
+			redirect( $this->config->item( 'mobile_redirect_url' ) );	
+		}
 
 		$data=array();
 
-		$ua=getBrowser();
 		$urlinfo=getUrl();
 		$releaseDateInfo=getReleaseDateInfo($urlinfo);
 		
