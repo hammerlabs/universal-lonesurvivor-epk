@@ -1092,6 +1092,8 @@
                     </div>
                 </div>
             </div>
+            <div class="rotate hide">
+            </div>
             <div id="status"></div>
 
             <div class="main_preloads hide">

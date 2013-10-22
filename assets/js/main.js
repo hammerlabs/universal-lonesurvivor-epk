@@ -15,9 +15,11 @@
     if (window.isiPad){
 		$(window).bind( 'orientationchange', function(e){
 		    if ($.event.special.orientationchange.orientation() == "portrait") {
-		        //Do whatever in portrait mode
+		        $(".rotate").show();
+		        $("body").css({overflow: 'hidden'});
 		    } else {
-		        //Do Whatever in landscape mode
+		        $(".rotate").hide();
+		        $("body").css({overflow: 'auto'});
 		    }
 		});
 
