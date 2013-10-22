@@ -105,18 +105,6 @@
 
 	}
 
-	function clickScrollIndicator(index) {
-		console.log("clicked box",index);
-		var targetScroll = window.scrollDest[index];
-		var curScroll = $(window).scrollTop();
-		var scrollDiff = targetScroll - curScroll;
-		var duration = Math.abs(scrollDiff / 1000);
-		window.clickToScrollOn = true;
-
-	   	TweenLite.to($( ".white_box" ), duration, {top:50*index + "px"});
-    	TweenLite.to(window, duration, {scrollTo:{y:targetScroll}, onComplete:function() {window.clickToScrollOn=false;}});
-	}
-
 	function siteReady(){
     	TweenLite.from($( ".wrapper.head" ).show(), 1, {top:-100});
     	TweenLite.from($( ".wrapper.foot" ).show(), 1, {bottom:-100});
@@ -134,8 +122,7 @@
     	$("#nav_prodnotes").on('mouseout', function(e) {
     		$("#nav_prodnotes").html("PRODUCTION NOTES");
     	});
-    	// found in gallery.js
-    	initGallery();
+
 	    // video playlist events
 		$("#nav_videos").on("click",function(e){
 			$(".ui-fixed").fadeToggle();
@@ -149,38 +136,6 @@
 			$(".main-container").fadeToggle();
 			$(".video_playlist").fadeToggle();
 			$(".video_playlist iframe").attr("src", "");
-		});
-		// scroll indicator events
-		window.scrollDest = [0, 1120, 3130, 5120, 7115, 8720];
-		window.scrollTest = [0, 680, 2670, 4680, 6700, 8720];
-		window.clickToScrollOn = false;
-		$("tr.indicator_box").on("click",function(e){
-			clickScrollIndicator($(this).data('index'));
-		});
-		$( window ).scroll(function() {
-			var curScroll = $(window).scrollTop();
-		    if (location.host.indexOf(".local")) {
-		    	$('#status').html( curScroll );
-		    }
-		    if (curScroll > 1000) {
-		    	$("video.video-bg")[0].pause();
-		    } else {
-		    	$("video.video-bg")[0].play();
-		    }
-		    if (window.clickToScrollOn) return;
-		    var curSectionIndex = 0;
-		    var destSectionIndex = 0;
-			$.each(window.scrollTest, function( index, value ) {
-				if (curScroll <= value) {
-					curSectionIndex = index;
-				} else if (curScroll > value) {
-					destSectionIndex = index;
-				}
-			});
-			if (curSectionIndex != destSectionIndex) {
-			    var duration = Math.abs((destSectionIndex - curSectionIndex) * .1);
-				TweenLite.to($( ".white_box" ), duration, {top:50*destSectionIndex + "px"});
-			}
 		});
 		//social bar events
 		$(".social-wrapper span").on("click",function(e){
@@ -249,10 +204,10 @@
 	   add ambient music feature
 	   ========================================================================== */
 		var audioSelector = ".audio-control";
-        window.audioTracks = ["assets/audio/LS1s.mp3", "assets/audio/LS1s.mp3", "assets/audio/LS1s.mp3", "assets/audio/LS1s.mp3", "assets/audio/LS1s.mp3", "assets/audio/LS2s.mp3", "assets/audio/LS2s.mp3", "assets/audio/LS2s.mp3", "assets/audio/LS2s.mp3", "assets/audio/LS2s.mp3"];
+        window.audioTracks = ["/assets/audio/LS1s.mp3", "/assets/audio/LS1s.mp3", "/assets/audio/LS1s.mp3", "/assets/audio/LS1s.mp3", "/assets/audio/LS1s.mp3", "/assets/audio/LS2s.mp3", "/assets/audio/LS2s.mp3", "/assets/audio/LS2s.mp3", "/assets/audio/LS2s.mp3", "/assets/audio/LS2s.mp3"];
 
-		window.amb_snd = new Audio( "assets/audio/LS1s.mp3" ); // buffers automatically when created
-		var snd2 = new Audio("assets/audio/LS2s.mp3");
+		window.amb_snd = new Audio( "/assets/audio/LS1s.mp3" ); // buffers automatically when created
+		var snd2 = new Audio("/assets/audio/LS2s.mp3");
 		amb_snd.addEventListener('ended', function() {
 		    this.currentTime = 0;
 		    this.src = window.audioTracks.shift();
@@ -290,13 +245,10 @@
 		 	}
 	    });
 
-		window.scroller=skrollr.init({
-			forceHeight: false,
-			smoothScrolling:false,
-			mobileDeceleration:0.1
-		});
-
-
+    	// found in gallery.js
+    	initGallery();
+    	// found in home.js
+    	if ( typeof initHome == 'function' ) initHome();
 	}
 
 	

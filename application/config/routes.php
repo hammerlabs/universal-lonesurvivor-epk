@@ -43,6 +43,7 @@ $route['default_controller'] = "device_redirect";
 $route['404_override'] = '';
 
 $route['site']="main";
+$route['site/story']="main/story";
 
 $route['less/(.*)'] = "less";
 $route['^[a-z]{2}/(.+)$'] = "$2";
