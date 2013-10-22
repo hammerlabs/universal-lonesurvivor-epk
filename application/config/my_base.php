@@ -18,6 +18,8 @@ $config['check_folders']=array(
 	array("folder"=>"assets/uploadimages","requires_write"=>true)
 );
 
+$config["mobile_redirect_url"] = "/mobile";
+
 //Meta tags, FB tags, etc.
 $config["title"] = "Site Title"; 
 $config["desc"] = "Site Description"; 
