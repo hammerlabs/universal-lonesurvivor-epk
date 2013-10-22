@@ -120,14 +120,14 @@ function getBrowser()
 		$browser_type = "Android";   
 		$view_port = 'width=1400';  
 		$modern_browser = "true";  
-    }   
+    }  
 
-	if (preg_match('/mobile/i', $u_agent)) {
- 		$device_type = "mobile"; 
-		$view_port = 'width=device-width, height=device-height, user-scalable=false'; 
-		$browser_type = "mobile";  
-		$modern_browser = "true";    
-    }    
+    if (preg_match('/iPhone|iPod|BlackBerry|IEMobile|Opera Mini|mobile/i', $u_agent)) {
+        $device_type = "mobile"; 
+        $view_port = 'width=device-width, height=device-height, user-scalable=false'; 
+        $browser_type = "mobile";  
+        $modern_browser = "true";    
+    }
 
 	if (preg_match('/sony tablet/i', $u_agent)) {
 		$device_type = "tablet";
@@ -142,7 +142,6 @@ function getBrowser()
 		$browser_type = "iPad"; 
 		$modern_browser = "true"; 
     }   
-
 
     return array(
 		'userAgent' => $u_agent,
