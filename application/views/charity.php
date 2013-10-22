@@ -22,7 +22,7 @@
                         <div>The Navy SEAL Foundation coordinates closely with Naval Special Warfare commands to support critical needs of active-duty operators while also providing resources for NSW veterans.</div>
                     </div>
                     <div class="charity-wrapper got_your_6">
-                        <a href="https://lonesurvivor.blackbaudondemand.com/donate" target="_blank">DONATE</a>
+                        <a href="https://www.gotyour6.org/donate/" target="_blank">DONATE</a>
                         <span class="title1 blocktext">GOT YOUR 6</span>
                         <div>Got Your 6 aims to bridge the civilian-military divide by creating a new conversation in America, so that veterans and military families are perceived as leaders and civic assets.</div>
                     </div>
