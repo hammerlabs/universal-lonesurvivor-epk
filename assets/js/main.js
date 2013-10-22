@@ -127,6 +127,13 @@
     	TweenLite.from($( "#flag_link" ).show(), .4, {marginRight:-300, opacity:0, delay: 1.6});
     	TweenLite.to($( ".main-container" ), 1, {opacity:1, delay: 2});
 
+    	// temporary production notes behavior
+    	$("#nav_prodnotes").on('mouseover', function(e) {
+    		$("#nav_prodnotes").html("COMING SOON");
+    	});
+    	$("#nav_prodnotes").on('mouseout', function(e) {
+    		$("#nav_prodnotes").html("PRODUCTION NOTES");
+    	});
     	// found in gallery.js
     	initGallery();
 	    // video playlist events
