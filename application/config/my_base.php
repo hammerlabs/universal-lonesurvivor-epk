@@ -17,7 +17,7 @@ $config['check_folders']=array(
 	array("folder"=>"assets/uploadimages","requires_write"=>true)
 );
 
-$config["mobile_redirect_url"] = "/mobile";
+$config["mobile_redirect_url"] = "http://universalpictures.mobi/lonesurvivor";
 
 //Meta tags, FB tags, etc.
 $config["title"] = "Lone Survivor | Official Movie Site | Universal Pictures"; 
