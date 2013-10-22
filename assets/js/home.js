@@ -1,4 +1,6 @@
 function initHome() {
+	// reset the scroll position so that the indicator and scroll position start in synch
+	$(document).scrollTop(0);
 	// scroll indicator events
 	window.scrollDest = [0, 1120, 3130, 5120, 7115, 8720];
 	window.scrollTest = [0, 680, 2670, 4680, 6700, 8720];
@@ -36,7 +38,7 @@ function initHome() {
 		$(this).siblings('.job-content').slideToggle("fast");
 	});
 
-	TweenMax.to($(".job .icon"), 1, {opacity: .5, repeat: -1, yoyo:true});
+	//TweenMax.to($(".job .icon"), 1, {opacity: .5, repeat: -1, yoyo:true});
 
 	window.scroller=skrollr.init({
 		forceHeight: false,

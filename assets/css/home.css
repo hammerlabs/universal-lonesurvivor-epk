@@ -132,11 +132,17 @@ div.tribute.section {
   display: block;
   cursor: pointer;
 }
+.job .container {
+  height: 250px;
+}
 .job .title2 {
   background-color: #333;
 }
 .job .bodycopy {
   background-color: #333;
+}
+.job .flourish {
+  position: absolute;
 }
 .bio {
   position: absolute;
@@ -186,12 +192,20 @@ div.tribute.section {
 }
 .marcus .job {
   top: 795px;
+  height: 220px;
 }
 .marcus .job .container {
   left: 360px;
+  background-image: url(/assets/img/home/job-flourish.png);
+  background-repeat: no-repeat;
+  background-position: 217px 63px;
 }
 .marcus .job .bodycopy {
   width: 315px;
+}
+.marcus .job .job-content {
+  position: absolute;
+  top: 71px;
 }
 .marcus .bio {
   top: 1098px;
@@ -230,9 +244,17 @@ div.tribute.section {
 }
 .mikey .job {
   top: 2769px;
+  height: 230px;
 }
 .mikey .job .container {
   left: 0px;
+  background-image: url(/assets/img/home/job-flourish.png);
+  background-repeat: no-repeat;
+  background-position: 167px 60px;
+}
+.mikey .job .job-content {
+  position: absolute;
+  top: 82px;
 }
 .mikey .job .bodycopy {
   width: 268px;
@@ -274,9 +296,17 @@ div.tribute.section {
 }
 .axe .job {
   top: 4749px;
+  height: 253px;
 }
 .axe .job .container {
   left: 0px;
+  background-image: url(/assets/img/home/job-flourish.png);
+  background-repeat: no-repeat;
+  background-position: 142px 67px;
+}
+.axe .job .job-content {
+  position: absolute;
+  top: 86px;
 }
 .axe .job .bodycopy {
   width: 268px;
@@ -318,9 +348,17 @@ div.tribute.section {
 }
 .dietz .job {
   top: 6761px;
+  height: 253px;
 }
 .dietz .job .container {
   left: 0px;
+  background-image: url(/assets/img/home/job-flourish.png);
+  background-repeat: no-repeat;
+  background-position: 167px 67px;
+}
+.dietz .job .job-content {
+  position: absolute;
+  top: 86px;
 }
 .dietz .job .bodycopy {
   width: 268px;
