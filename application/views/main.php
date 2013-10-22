@@ -117,7 +117,7 @@
                     <div class="quote-bot">
                         <div class="container">
                             <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-bot-text-img" data-source="assets/img/home/marcus/quote-large-text-img.png" />
-                            <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-bot-img" data-source="assets/img/home/marcus/quote-large-img.png" />
+                            <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-bot-img" data-source="assets/img/home/marcus/anim.gif" />
                         </div>
                     </div>
                 </div>
@@ -147,7 +147,7 @@
                     <div class="quote-bot">
                         <div class="container">
                             <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-bot-text-img" data-source="assets/img/home/mikey/quote-large-text-img.png" />
-                            <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-bot-img" data-source="assets/img/home/mikey/quote-large-img.png" />
+                            <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-bot-img" data-source="assets/img/home/mikey/anim.gif" />
                         </div>
                     </div>
                 </div>
@@ -177,7 +177,7 @@
                     <div class="quote-bot">
                         <div class="container">
                             <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-bot-text-img" data-source="assets/img/home/axe/quote-large-text-img.png" />
-                            <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-bot-img" data-source="assets/img/home/axe/quote-large-img.png" />
+                            <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-bot-img" data-source="assets/img/home/axe/anim.gif" />
                         </div>
                     </div>
                 </div>
@@ -207,7 +207,7 @@
                     <div class="quote-bot">
                         <div class="container">
                             <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-bot-text-img" data-source="assets/img/home/dietz/quote-large-text-img.png" />
-                            <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-bot-img" data-source="assets/img/home/dietz/quote-large-img.png" />
+                            <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-bot-img" data-source="assets/img/home/dietz/anim.gif" />
                         </div>
                     </div>
                 </div>
