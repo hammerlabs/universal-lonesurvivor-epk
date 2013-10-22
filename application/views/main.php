@@ -273,18 +273,18 @@
 	    </div>
         <div class="gallery hide">
             <?php echo $gallery_photos; ?>
-            <img class="arrow left" onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-top-img" data-source=="assets/img/gallery/arrow_left.png">
-            <img class="arrow right" onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-top-img" data-source=="assets/img/gallery/arrow_right.png">
-            <img class="close" onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-top-img" data-source=="assets/img/gallery/close.png">
+            <img class="arrow left" onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-top-img" data-source="assets/img/gallery/arrow_left.png">
+            <img class="arrow right" onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-top-img" data-source="assets/img/gallery/arrow_right.png">
+            <img class="close" onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-top-img" data-source="assets/img/gallery/close.png">
             <div class="thumbs">
-                <div class="thumbarrow_box left"><img class="thumbarrow"  onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-top-img" data-source=="assets/img/gallery/arrow_left.png"></div>
-                <div class="thumbarrow_box right"><img class="thumbarrow"  onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-top-img" data-source=="assets/img/gallery/arrow_right.png"></div>
+                <div class="thumbarrow_box left"><img class="thumbarrow"  onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-top-img" data-source="assets/img/gallery/arrow_left.png"></div>
+                <div class="thumbarrow_box right"><img class="thumbarrow"  onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-top-img" data-source="assets/img/gallery/arrow_right.png"></div>
                 <div class="thumb-pages"></div>
             </div>
         </div>
         <div class="video_playlist hide">
             <iframe src="" frameborder="0" allowfullscreen></iframe>
-            <img class="close" onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-top-img" data-source=="assets/img/gallery/close.png">
+            <img class="close" onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-top-img" data-source="assets/img/gallery/close.png">
         </div>
 	    <div class="wrapper head hide">
 	        <div class="content">

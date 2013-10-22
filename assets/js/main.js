@@ -241,12 +241,16 @@
 	/* ==========================================================================
 	   add ambient music feature
 	   ========================================================================== */
-		var audioUrl = (location.host.indexOf(".local") != -1 ? "" : "assets/audio/ambience.mp3");
 		var audioSelector = ".audio-control";
-		//Add ambience sound
-		window.amb_snd = new Audio( audioUrl ); // buffers automatically when created
+        window.audioTracks = ["assets/audio/LS1s.mp3", "assets/audio/LS1s.mp3", "assets/audio/LS1s.mp3", "assets/audio/LS1s.mp3", "assets/audio/LS1s.mp3", "assets/audio/LS2s.mp3", "assets/audio/LS2s.mp3", "assets/audio/LS2s.mp3", "assets/audio/LS2s.mp3", "assets/audio/LS2s.mp3"];
+
+		window.amb_snd = new Audio( "assets/audio/LS1s.mp3" ); // buffers automatically when created
+		var snd2 = new Audio("assets/audio/LS2s.mp3");
 		amb_snd.addEventListener('ended', function() {
 		    this.currentTime = 0;
+		    this.src = window.audioTracks.shift();
+		    window.audioTracks.push( this.src );
+		    console.log("audio changing to", this.src);
 		    this.play();
 		}, false);			
 		amb_snd.play();
