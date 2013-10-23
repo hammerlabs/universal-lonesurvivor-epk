@@ -1,7 +1,10 @@
 /*We don't want iPad to highlight clicks */
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-/*We need to force iPad browser to use hardware acceleration*/
+}
+
+@media all and (device-width: 768px) and (device-height: 1024px) {
+    /*We need to force iPad browser to use hardware acceleration*/
     -webkit-transform: translate3d(0,0,0);  
 }
 

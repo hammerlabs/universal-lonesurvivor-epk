@@ -63,11 +63,13 @@ function initHome() {
 	};
 	var watchBuffer = setInterval(updateProgressBar, 500);
 
-	window.scroller=skrollr.init({
-		forceHeight: false,
-		smoothScrolling:false,
-		mobileDeceleration:0.1
-	});
+	if (!window.isiPad) {
+		window.scroller=skrollr.init({
+			forceHeight: false,
+			smoothScrolling:false,
+			mobileDeceleration:0.1
+		});
+	}
 
 }
 
