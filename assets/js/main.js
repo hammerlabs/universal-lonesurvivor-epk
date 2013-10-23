@@ -47,7 +47,10 @@
 			//Add source to deferred images to get them downloaded by browser
 			//We do this to avoid the browser from delaying preloader because of loading imgs already at dom
 			$("img").each(function(){
-				var src=$(this).data("source")
+				var src=$(this).data("source");
+				if (window.isiPad && src.indexOf("/anim.gif") != -1) {
+					src = src.replace("/anim.gif", "/quote-large-img.png")
+				}
 				if (src!=""){
 					$(this).attr("src",src);
 				}

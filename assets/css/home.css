@@ -177,8 +177,12 @@ div.tribute.section {
   width: 978px;
   overflow: hidden;
 }
-.quote-bot .container img {
+.quote-bot .quote-bot-img-wrapper {
   position: absolute;
+  background-image: url(/assets/img/home/quote-large-frame.png);
+  padding: 6px;
+  width: 240px;
+  height: 136px;
 }
 .marcus.fore {
   top: 1360px;
@@ -231,7 +235,7 @@ div.tribute.section {
   top: 0px;
   left: 0px;
 }
-.marcus .quote-bot-img {
+.marcus .quote-bot-img-wrapper {
   top: 115px;
   left: 181px;
 }
@@ -283,7 +287,7 @@ div.tribute.section {
   top: 0px;
   left: 0px;
 }
-.mikey .quote-bot-img {
+.mikey .quote-bot-img-wrapper {
   top: 86px;
   left: 229px;
 }
@@ -335,7 +339,7 @@ div.tribute.section {
   top: 0px;
   left: 0px;
 }
-.axe .quote-bot-img {
+.axe .quote-bot-img-wrapper {
   top: 106px;
   left: 197px;
 }
@@ -387,7 +391,7 @@ div.tribute.section {
   top: 0px;
   left: 0px;
 }
-.dietz .quote-bot-img {
+.dietz .quote-bot-img-wrapper {
   top: 89px;
   left: 355px;
 }
