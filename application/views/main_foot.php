@@ -1092,7 +1092,7 @@
                     </div>
                 </div>
             </div>
-            <div class="rotate hide">
+            <div class="portrait_detected hide">
             </div>
             <div id="status"></div>
 
