@@ -11,20 +11,6 @@
 
 	window.isiPad = navigator.userAgent.match(/iPad/i) != null;
 
-	//We want to detect swipe only if in iPad. Desktop browsers don't react exactly well with this
-    if (window.isiPad){
-		$(window).bind( 'orientationchange', function(e){
-		    if ($.event.special.orientationchange.orientation() == "portrait") {
-		        $(".rotate").show();
-		        $("body").css({overflow: 'hidden'});
-		    } else {
-		        $(".rotate").hide();
-		        $("body").css({overflow: 'auto'});
-		    }
-		});
-
-	}
-
 	// support chrome and firefox by changing src to ogv in js instead of nested source tags
 	var videoRefs = $( "body" ).find("video");
 	if (videoRefs && videoRefs[0] && !videoRefs[0].canPlayType('video/mp4; codecs="avc1.42E01E, mp4a.40.2"')) {
@@ -35,8 +21,15 @@
 
 
 
-	//Code that needs to run only when DOM and scripts are loaded.
+			//Code that needs to run only when DOM and scripts are loaded.
 	$(document).ready(function () {
+		//check screen orientation on iPad only
+	    if (window.isiPad){
+			reviewScreen();	
+			window.onorientationchange = function() {
+				reviewScreen();	
+			}
+		}
 
 		window.preloader = $(".loader-container.preloader");
 		window.mainloader=$(".loader-container.main-loader");
@@ -260,6 +253,55 @@
     	if ( typeof initHome == 'function' ) initHome();
 	}
 
+	function getScreen() {
+		var orientation = window.orientation;
+		
+		if (typeof orientation == "undefined") return 1;
+		var uagent = navigator.userAgent.toLowerCase();
+
+		if (uagent.search("android") > -1) {		
+			switch (orientation) {
+				case 90:
+				case -90:
+					return 1;//wide
+					break ;
+				default :
+					return -1;//narrow
+					break ;
+			}
+		} else {
+			switch (orientation) {
+				case 90:
+				case -90:
+					return 1;//wide
+					break ;
+				default :
+					return -1;//narrow
+					break ;
+			}
+		}
+
+	}
+
+	function reviewScreen() {
+
+		if (getScreen() == -1) {
+			setNarrowScreen();
+		} else {
+			setWideScreen();
+		}
+	}
+	//narrow
+	function setNarrowScreen() {
+		$(".portrait_detected").show();
+		$("body").css({overflow: 'hidden'});
+	}
+
+	//wide
+	function setWideScreen() {
+		$(".portrait_detected").hide();
+		$("body").css({overflow: 'auto'});
+	}
 	
 
 }( jQuery ));
