@@ -2,7 +2,7 @@ function initHome() {
 	// reset the scroll position so that the indicator and scroll position start in synch
 	$(document).scrollTop(0);
 	// scroll indicator events
-	window.scrollDest = [0, 1120, 3130, 5120, 7115, 8720];
+	window.scrollDest = [0, 1120, 3130, 5120, 7115, 8986];
 	window.scrollTest = [0, 680, 2670, 4680, 6700, 8720];
 	window.clickToScrollOn = false;
 	$("tr.indicator_box").on("click",function(e){
@@ -42,6 +42,26 @@ function initHome() {
 	});
 
 	TweenMax.to($(".job .icon"), 1, {opacity: .5, repeat: -1, yoyo:true});
+
+	var videobg = $("video.video-bg");
+	var videoDuration = videobg.prop('duration');
+
+	var updateProgressBar = function(){
+	    if (videobg.prop('readyState')) {
+	        var buffered = videobg.prop("buffered").end(0);
+	        var percent = 100 * buffered / videoDuration;
+
+	        //Your code here
+	        console.log("video completion", percent);
+
+	        //If finished buffering buffering quit calling it
+	        if (buffered >= videoDuration) {
+	                clearInterval(watchBuffer);
+	                videobg.css('opacity', "1");
+	        }
+	    }
+	};
+	var watchBuffer = setInterval(updateProgressBar, 500);
 
 	window.scroller=skrollr.init({
 		forceHeight: false,
