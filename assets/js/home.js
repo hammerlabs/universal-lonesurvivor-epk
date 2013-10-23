@@ -8,6 +8,9 @@ function initHome() {
 	$("tr.indicator_box").on("click",function(e){
 		clickScrollIndicator($(this).data('index'));
 	});
+	$( window ).resize(function() {
+		resizeWindow();
+	});
 	$( window ).scroll(function() {
 		var curScroll = $(window).scrollTop();
 	    if (location.host.indexOf(".local")) {
@@ -38,13 +41,24 @@ function initHome() {
 		$(this).siblings('.job-content').slideToggle("fast");
 	});
 
-	//TweenMax.to($(".job .icon"), 1, {opacity: .5, repeat: -1, yoyo:true});
+	TweenMax.to($(".job .icon"), 1, {opacity: .5, repeat: -1, yoyo:true});
 
 	window.scroller=skrollr.init({
 		forceHeight: false,
 		smoothScrolling:false,
 		mobileDeceleration:0.1
 	});
+
+}
+
+function resizeWindow() {
+	var curWidth = $( window ).width();
+	if (curWidth < 1680) {
+		// video height isn't touching the content below
+		$("video.video-bg")[0].css('height', $("div.marcus.section").position().top);
+	} else if (curWidth < 1024) {
+		// force video to tay at 978px wide as a minimum
+	}
 
 }
 
