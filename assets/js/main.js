@@ -48,10 +48,10 @@
 			//We do this to avoid the browser from delaying preloader because of loading imgs already at dom
 			$("img").each(function(){
 				var src=$(this).data("source");
-				if (window.isiPad && src.indexOf("/anim.gif") != -1) {
-					src = src.replace("/anim.gif", "/quote-large-img.png")
-				}
-				if (src!=""){
+				if (src!="" && src != undefined) {
+					if (window.isiPad && src.indexOf("/anim.gif") != -1) {
+						src = src.replace("/anim.gif", "/quote-large-img.png")
+					}
 					$(this).attr("src",src);
 				}
 			});
