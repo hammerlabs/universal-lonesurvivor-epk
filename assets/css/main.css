@@ -1,7 +1,5 @@
 * {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-.main-container * {
   -webkit-transform: translate3d(0,0,0);
 }
 .hide {
