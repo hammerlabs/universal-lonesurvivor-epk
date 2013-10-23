@@ -12,7 +12,7 @@
             <div class="main-container hide">
     	        <div id="home">
     	            <div id="video">
-                        <video class="video-bg" src="assets/video/ls_bg_v3_1600kbps.mp4" loop autoplay></video>
+                        <video class="video-bg" src="assets/video/ls_BG_V3_1600kbps.mp4" loop autoplay></video>
     	                <div class="video-texture"></div>
     	            </div>
     	        </div>
