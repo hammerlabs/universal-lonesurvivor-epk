@@ -1,12 +1,8 @@
 function initHome() {
 
-	TweenMax.to($(".job .icon"), 1, {opacity: .5, repeat: -1, yoyo:true});
-
-	$(".job .icon").on("click",function(e){
-		$(".job .icon").siblings('.job-content').slideToggle("fast");
-	});
 	
-	if (!window.isiPad) {
+	
+	//if (!window.isiPad) {
 		// reset the scroll position so that the indicator and scroll position start in synch
 		$(document).scrollTop(0);
 		// scroll indicator events
@@ -24,15 +20,29 @@ function initHome() {
 			scrollWindow();
 		});
 		initHomeVideo();
+		$(".job .icon").on("click",function(e){
+			console.log($(this).siblings('.job-content')[0]);
+			$($(this).siblings('.job-content')[0]).slideToggle();
+		});
+
+		TweenMax.to($(".job .icon"), 1, {opacity: .5, repeat: -1, yoyo:true});
 
 		window.scroller=skrollr.init({
 			forceHeight: false,
 			smoothScrolling:false,
 			mobileDeceleration:0.1
 		});
-	} else {
+	//} else {
+		/*$('.job-content').removeClass("hide");
 		$(".indicator").remove();
-	}
+
+		$("video").on("touchstart",function(e){
+			alert("touched video");
+			setVideoBgUrl();
+			//TweenMax.to($("video.video-bg"), 1, {opacity: '1'});
+			videobg.play();
+		});*/
+	//}
 
 }
 
@@ -52,6 +62,7 @@ function initHomeVideo() {
 	        if (buffered >= videoDuration) {
 	                clearInterval(watchBuffer);
 	                TweenMax.to(videobg, 1, {opacity: '1'});
+	                $(videobg[0]).play();
 	        }
 	    }
 	};
@@ -86,13 +97,13 @@ function scrollWindow() {
 }
 
 function resizeWindow() {
-	var curWidth = $( window ).width();
+	/*var curWidth = $( window ).width();
 	if (curWidth < 1680) {
 		// video height isn't touching the content below
 		$("video.video-bg")[0].css('height', $("div.marcus.section").position().top);
 	} else if (curWidth < 1024) {
 		// force video to tay at 978px wide as a minimum
-	}
+	}*/
 
 }
 
@@ -108,7 +119,18 @@ function clickScrollIndicator(index) {
 	TweenLite.to(window, duration, {scrollTo:{y:targetScroll}, onComplete:function() {window.clickToScrollOn=false;}});
 }
 
-if (!window.isiPad) {
+function setVideoBgUrl() {
 	var videobg = $("video.video-bg");
 	videobg.attr("src", "assets/video/ls_BG_V3_1600kbps.mp4");
+	// support chrome and firefox by changing src to ogv in js instead of nested source tags
+	if (!videobg[0].canPlayType('video/mp4; codecs="avc1.42E01E, mp4a.40.2"')) {
+		$(videobg[0]).attr("src", $(videobg[0]).attr("src").replace(".mp4", ".ogv"));
+	}
 }
+
+// I'm setting window.isiPad here again because at one point i was worried that this file was 
+// getting loaded before main.js.. need to figure out how to use weights
+window.isiPad = navigator.userAgent.match(/iPad/i) != null;
+//if (!window.isiPad) {
+	setVideoBgUrl();
+//}

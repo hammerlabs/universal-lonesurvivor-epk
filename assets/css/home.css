@@ -28,6 +28,14 @@ div#home div#video .video-texture {
   div#home {
     position: relative;
   }
+  div#home div#video {
+    width: 1280px;
+    height: 720px;
+    display: none;
+  }
+  div#home .video-texture {
+    display: none;
+  }
 }
 div.section {
   width: 100%;

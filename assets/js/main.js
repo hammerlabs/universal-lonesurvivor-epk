@@ -11,17 +11,7 @@
 
 	window.isiPad = navigator.userAgent.match(/iPad/i) != null;
 
-	// support chrome and firefox by changing src to ogv in js instead of nested source tags
-	var videoRefs = $( "body" ).find("video");
-	if (videoRefs && videoRefs[0] && !videoRefs[0].canPlayType('video/mp4; codecs="avc1.42E01E, mp4a.40.2"')) {
-		videoRefs.each(function() {
-			$(this).src = $(this).src.replace(".mp4", ".ogv");
-		});
-	}
-
-
-
-			//Code that needs to run only when DOM and scripts are loaded.
+	//Code that needs to run only when DOM and scripts are loaded.
 	$(document).ready(function () {
 		//check screen orientation on iPad only
 	    if (window.isiPad){
