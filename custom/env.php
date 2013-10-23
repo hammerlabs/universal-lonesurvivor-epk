@@ -17,6 +17,7 @@ $_environments_list = array(
 	'development' => array(
 		'.local',
 		'.hammerlabs.com',
+		'192.168',
 		'.localdomain'
 	),
 

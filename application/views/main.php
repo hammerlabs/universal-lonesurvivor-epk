@@ -12,7 +12,7 @@
             <div class="main-container hide">
     	        <div id="home">
     	            <div id="video">
-                        <video class="video-bg" src="assets/video/ls_BG_V3_1600kbps.mp4" loop autoplay></video>
+                        <video class="video-bg" src="" loop autoplay></video>
     	                <div class="video-texture"></div>
     	            </div>
     	        </div>
@@ -100,7 +100,7 @@
                     </div>
                     <div class="job">
                         <div class="container">
-                            <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="icon" data-source="assets/img/home/marcus/medic-icon.png" />
+                            <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" onclick="" class="icon" data-source="assets/img/home/marcus/medic-icon.png" />
                             <div class="job-content hide">
                                 <span class="blocktext title2">NAVY MEDIC</span>
                                 <p class="blocktext bodycopy share-tech">Respectfully referred to as "Doc," Navy Medics are frequently the only medical care-giver available in their unit. In battle, Medics must be ready to perform emergency medical treatment in an active combat environment. Navy Medics receive extensive training in the application of various medical techniques.</p>

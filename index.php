@@ -24,7 +24,7 @@ $_host_name = $_SERVER[ 'SERVER_NAME' ];
 $_this_env = 'production'; // this is the default env
 foreach ( $_environments_list as $env_name => $env_urls ) {
 	foreach ( $env_urls as $url ) {
-		if ( preg_match( "/{$url}$/", $_host_name ) ) {
+		if ( preg_match( "/{$url}/", $_host_name ) ) {
 			$_this_env = $env_name; // boom, we found it
 			break 2;
 		}
@@ -47,20 +47,13 @@ if (defined('ENVIRONMENT'))
 	{
 		case 'development':
 			error_reporting(E_ALL);
-			//$system_path = $_SERVER['DOCUMENT_ROOT']. '/../system';
-			//$application_folder = $_SERVER['DOCUMENT_ROOT']. '/../application';
-			$system_path = $_SERVER['DOCUMENT_ROOT']. '/system';
-			$application_folder = $_SERVER['DOCUMENT_ROOT']. '/application';
 		break;
 	
 		case 'testing':
 			error_reporting(E_ALL);
-			$system_path = $_SERVER['DOCUMENT_ROOT']. '/system';
-			$application_folder = $_SERVER['DOCUMENT_ROOT']. '/application';
 		break;
+
 		case 'production':
-			$system_path = $_SERVER['DOCUMENT_ROOT']. '/system';
-			$application_folder = $_SERVER['DOCUMENT_ROOT']. '/application';
 			error_reporting(0);
 		break;
 
@@ -79,7 +72,7 @@ if (defined('ENVIRONMENT'))
  * as this file.
  *
  */
-	//$system_path = $_SERVER['DOCUMENT_ROOT']. '/../system';
+	$system_path = $_SERVER['DOCUMENT_ROOT']. '/system';
 
 /*
  *---------------------------------------------------------------
@@ -95,7 +88,7 @@ if (defined('ENVIRONMENT'))
  * NO TRAILING SLASH!
  *
  */
-	//$application_folder = $_SERVER['DOCUMENT_ROOT']. '/../application';
+	$application_folder = $_SERVER['DOCUMENT_ROOT']. '/application';
 
 /*
  * --------------------------------------------------------------------

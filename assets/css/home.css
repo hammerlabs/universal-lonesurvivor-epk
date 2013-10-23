@@ -24,6 +24,11 @@ div#home div#video .video-texture {
   top: 35px;
   background-image: url(/assets/img/home/scanlines.png);
 }
+@media all and (device-width: 768px) and (device-height: 1024px) {
+  div#home {
+    position: relative;
+  }
+}
 div.section {
   width: 100%;
   height: 2000px;
@@ -72,11 +77,18 @@ div.dietz.section {
   top: 6686px;
 }
 div.tribute.section {
-  background-image: url(/assets/img/home/tribute/bg.jpg);
-  background-position: top center;
+  background-image: url(/assets/img/home/tribute/bg-top.jpg), url(/assets/img/home/tribute/bg-bot.jpg);
+  background-position: top center, bottom center;
   position: fixed;
   top: 35px;
   height: 2250px;
+}
+@media all and (device-width: 768px) and (device-height: 1024px) {
+  div.tribute.section {
+    position: absolute;
+    top: 8686px;
+    height: 2250px;
+  }
 }
 .blocktext {
   padding-left: 12px;

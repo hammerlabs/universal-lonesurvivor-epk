@@ -33,7 +33,11 @@ div#home {
         }
     }
 }
-
+@media all and (device-width: 768px) and (device-height: 1024px) {
+    div#home {
+        position: relative;
+    }    
+}
 div.section {
     width: 100%;
     height: 2000px;
@@ -68,11 +72,18 @@ div.mikey.section { background-image: url(/assets/img/home/mikey/bg.jpg); top: @
 div.axe.section { background-image: url(/assets/img/home/axe/bg.jpg); top: @homeheight + 4000; }
 div.dietz.section { background-image: url(/assets/img/home/dietz/bg.jpg); top: @homeheight + 6000; }
 div.tribute.section { 
-    background-image: url(/assets/img/home/tribute/bg.jpg); 
-    background-position: top center;
+    background-image: url(/assets/img/home/tribute/bg-top.jpg), url(/assets/img/home/tribute/bg-bot.jpg);
+    background-position: top center, bottom center;
     position: fixed;
     top: 35px;
     height: 2250px;
+}
+@media all and (device-width: 768px) and (device-height: 1024px) {
+    div.tribute.section {
+        position: absolute;
+        top: 8686px;
+        height: 2250px;
+    }    
 }
 
 .blocktext {
