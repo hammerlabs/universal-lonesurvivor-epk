@@ -1,30 +1,27 @@
 div#home {
-  padding-top: 35px;
-  height: 686px;
+  position: fixed;
+  top: 35px;
+  width: 100%;
+  height: 720px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(/assets/img/home/bg.jpg);
+  text-align: center;
 }
 div#home div#video {
-  min-width: 978px;
-  max-width: 1280px;
-  margin-left: 50%;
-  position: absolute;
-  top: 35px;
-  left: -640px;
-  height: 686px;
-}
-div#home div#video img {
-  display: none;
-  width: 100%;
+  display: inline-block;
+  width: 1680px;
+  height: 720px;
 }
 div#home div#video video.video-bg {
   width: 100%;
-  max-height: 686px;
 }
 div#home div#video .video-texture {
   width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 35px;
   background-image: url(/assets/img/home/scanlines.png);
-  position: relative;
-  top: -689px;
-  height: 686px;
 }
 div.section {
   width: 100%;
@@ -76,7 +73,8 @@ div.dietz.section {
 div.tribute.section {
   background-image: url(/assets/img/home/tribute/bg.jpg);
   background-position: top center;
-  top: 8686px;
+  position: fixed;
+  top: 35px;
   height: 2250px;
 }
 .blocktext {
@@ -451,6 +449,7 @@ div.tribute.section {
   top: 10270px;
   text-align: center;
   padding-right: 300px;
+  height: 600px;
 }
 .tribute .honor-title {
   color: #fff;

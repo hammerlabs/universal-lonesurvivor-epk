@@ -67,7 +67,7 @@ input {
 *:focus {
   outline: none;
 }
-.rotate {
+.portrait_detected {
   width: 768px;
   height: 1024px;
   background-image: url(/assets/img/rotate_device.jpg);
@@ -568,5 +568,5 @@ input {
   color: #f00;
   top: 0px;
   right: 10px;
-  display: none;
+  display: block;
 }

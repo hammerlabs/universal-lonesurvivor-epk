@@ -11,15 +11,14 @@
 
             <div class="main-container hide">
     	        <div id="home">
-    	            <div id="video" data-0="top:35px;" data-686="top: 600px;">
-    	                <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" id="video-poster" data-source="assets/img/home/bg.jpg" />
-    	                <video class="video-bg" src="assets/video/ls_bg_v3_sized.mp4" loop autoplay></video>
+    	            <div id="video">
+                        <video class="video-bg" src="assets/video/ls_bg_v3_1600kbps.mp4" loop autoplay></video>
     	                <div class="video-texture"></div>
     	            </div>
     	        </div>
-    	        <div class="tribute section" data-7686="top:8186px;" data-10936="top: 9586px;">
+    	        <div class="tribute section" data-0="top:720px;" data-720="top:720px;" data-800="top:35px;" data-8980="top:35px;" data-10730="top:-1000px;">
     	        </div>
-                <div class="tribute home-content" data-7686="top:-300px;" data-9936="top: -30;">
+                <div class="tribute home-content" data-8400="top:700px;" data-9936="top: -30;">
                     <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-image" data-source="assets/img/home/tribute/quote-img.png" />
                     <div class="seals">
                         <div class="seal marcus">
