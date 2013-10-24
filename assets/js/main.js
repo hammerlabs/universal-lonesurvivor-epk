@@ -206,10 +206,10 @@
 	   add ambient music feature
 	   ========================================================================== */
 		var audioSelector = ".audio-control";
-        window.audioTracks = ["/assets/audio/LS1s.mp3", "/assets/audio/LS1s.mp3", "/assets/audio/LS1s.mp3", "/assets/audio/LS1s.mp3", "/assets/audio/LS1s.mp3", "/assets/audio/LS2s.mp3", "/assets/audio/LS2s.mp3", "/assets/audio/LS2s.mp3", "/assets/audio/LS2s.mp3", "/assets/audio/LS2s.mp3"];
+        window.audioTracks = ["assets/audio/LS1s.mp3", "assets/audio/LS1s.mp3", "assets/audio/LS1s.mp3", "assets/audio/LS1s.mp3", "assets/audio/LS1s.mp3", "assets/audio/LS2s.mp3", "assets/audio/LS2s.mp3", "assets/audio/LS2s.mp3", "assets/audio/LS2s.mp3", "assets/audio/LS2s.mp3"];
 
-		window.amb_snd = new Audio( "/assets/audio/LS1s.mp3" ); // buffers automatically when created
-		var snd2 = new Audio("/assets/audio/LS2s.mp3");
+		window.amb_snd = new Audio( "assets/audio/LS1s.mp3" ); // buffers automatically when created
+		var snd2 = new Audio("assets/audio/LS2s.mp3");
 		amb_snd.addEventListener('ended', function() {
 		    this.currentTime = 0;
 		    this.src = window.audioTracks.shift();

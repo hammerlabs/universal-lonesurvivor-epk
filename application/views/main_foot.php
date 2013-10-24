@@ -3,7 +3,7 @@
                     <div class="right">
                         <div id="logo">
                             <h1 id="site-title" class="ir">Lone Survivor</h1>
-                            <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="release-date" data-source="/assets/img/nav/release-date.png" />
+                            <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="release-date" data-source="assets/img/nav/release-date.png" />
                         </div>
                         <div id="showtimes-wrapper">
                             <div id="showtimes">
@@ -1041,18 +1041,18 @@
             </div>
             <div class="gallery hide">
                 <?php echo $gallery_photos; ?>
-                <img class="arrow left" onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-top-img" data-source="/assets/img/gallery/arrow_left.png">
-                <img class="arrow right" onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-top-img" data-source="/assets/img/gallery/arrow_right.png">
-                <img class="close" onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-top-img" data-source="/assets/img/gallery/close.png">
+                <img class="arrow left" onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-top-img" data-source="assets/img/gallery/arrow_left.png">
+                <img class="arrow right" onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-top-img" data-source="assets/img/gallery/arrow_right.png">
+                <img class="close" onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-top-img" data-source="assets/img/gallery/close.png">
                 <div class="thumbs">
-                    <div class="thumbarrow_box left"><img class="thumbarrow"  onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-top-img" data-source="/assets/img/gallery/arrow_left.png"></div>
-                    <div class="thumbarrow_box right"><img class="thumbarrow"  onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-top-img" data-source="/assets/img/gallery/arrow_right.png"></div>
+                    <div class="thumbarrow_box left"><img class="thumbarrow"  onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-top-img" data-source="assets/img/gallery/arrow_left.png"></div>
+                    <div class="thumbarrow_box right"><img class="thumbarrow"  onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-top-img" data-source="assets/img/gallery/arrow_right.png"></div>
                     <div class="thumb-pages"></div>
                 </div>
             </div>
             <div class="video_playlist hide">
                 <iframe src="" frameborder="0" allowfullscreen></iframe>
-                <img class="close" onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-top-img" data-source="/assets/img/gallery/close.png">
+                <img class="close" onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-top-img" data-source="assets/img/gallery/close.png">
             </div>
             <div class="wrapper head hide">
                 <div class="content">
@@ -1074,8 +1074,8 @@
             <div class="wrapper foot hide">
                 <div class="content">
                     <div class="left">
-                        <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" data-source="/assets/img/nav/universal-logo.png" />
-                        <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="eff_logo" data-source="/assets/img/nav/eff-logo.png" />
+                        <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" data-source="assets/img/nav/universal-logo.png" />
+                        <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="eff_logo" data-source="assets/img/nav/eff-logo.png" />
                         <div>
                             <a href="http://www.universalpictures.com/legal/privacy.html" target="_blank">PRIVACY POLICY</a> | 
                             <a href="http://www.universalpictures.com/legal/index.html" target="_blank">TERMS OF USE</a> | 
@@ -1084,7 +1084,7 @@
                         </div>
                     </div>
                     <div class="right">
-                        <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="rating" data-source="/assets/img/nav/rating.png" />
+                        <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="rating" data-source="assets/img/nav/rating.png" />
                         <div>
                             <a href="http://filmratings.com/" target="_blank">FILMRATINGS.COM</a> | 
                             <a href="http://mpaa.org/" target="_blank">MPAA.ORG</a>

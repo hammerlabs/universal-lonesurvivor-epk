@@ -57,7 +57,7 @@
   display: inline-block;
 }
 .gallery .thumbs .thumb-holder.selected {
-  background-image: url(/assets/img/gallery/selected-thumb.png);
+  background-image: url(../img/gallery/selected-thumb.png);
 }
 .gallery .thumbs .thumb {
   width: 160px;
