@@ -4,6 +4,7 @@
 $config[ 'minify_js' ] = true;
 $config[ 'minify_css' ] = true;
 
+$config[ 'less_route_replacement' ] = "assets";
 $config[ 'minify_css_base_folder' ] = "assets";
 $config[ 'minify_js_base_folder' ] = "assets";
 
