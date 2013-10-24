@@ -1,5 +1,5 @@
 .main-container #story {
-  background-image: url(/assets/img/story-bg.jpg);
+  background-image: url(../img/story-bg.jpg);
   width: 100%;
   height: 900px;
   background-repeat: no-repeat;
@@ -23,7 +23,7 @@
   top: 166px;
 }
 .main-container #story .content-wrapper {
-  background-image: url(/assets/img/story-text-bg.png);
+  background-image: url(../img/story-text-bg.png);
   background-repeat: no-repeat;
   width: 529px;
   padding-left: 29px;
