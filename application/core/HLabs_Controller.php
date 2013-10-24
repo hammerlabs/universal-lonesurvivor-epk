@@ -20,14 +20,14 @@
 
 	public function _add_css($css,$group="head",$options=array())
 	{
-		$options=array_replace($this->default_css_options,$options);
+		$options=array_merge($this->default_css_options,$options);
 		$options["file"]=$css;
 		$this->css_groups[$group][]=$options;
 	}
 
 	public function _add_js($js,$group="head", $options=array())
 	{
-		$options=array_replace($this->default_js_options,$options);
+		$options=array_merge($this->default_js_options,$options);
 		$options["file"]=$js;
 		$this->js_groups[$group][]=$options;
 	}
