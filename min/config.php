@@ -70,9 +70,10 @@ $min_allowDebugFlag = false;
  * If /min/ is directly inside your document root, just uncomment the 
  * second line. The third line might work on some Apache servers.
  */
-$min_documentRoot = '';
+//$min_documentRoot = '';
 //$min_documentRoot = substr(__FILE__, 0, -15);
 //$min_documentRoot = $_SERVER['SUBDOMAIN_DOCUMENT_ROOT'];
+/*THIS IS GETTING SET AT THE BOTTOM OF THE FILE */
 
 
 /**
@@ -182,3 +183,18 @@ $min_libPath = dirname(__FILE__) . '/lib';
 
 // try to disable output_compression (may not have an effect)
 ini_set('zlib.output_compression', '0');
+
+// You can disable the automatic rewriting by setting this to false
+// if true, relative paths get changed to minify's best guess at a web root path
+//$min_serveOptions['rewriteCssUris'] = false;
+//$min_serveOptions['minifierOptions']['text/css']['prependRelativePath'] = '/css/';
+
+
+// Set the document root to be the path of the "site root"
+$min_documentRoot = substr(__FILE__, 0, -15);
+
+// Set $sitePrefix to the path of the site from the webserver's real docroot
+list($sitePrefix) = explode('/min/index.php', $_SERVER['SCRIPT_NAME'], 2);
+
+// Prepend $sitePrefix to the rewritten URIs in CSS files
+$min_symlinks['//' . ltrim($sitePrefix, '/')] = $min_documentRoot;
