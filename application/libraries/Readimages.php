@@ -8,7 +8,7 @@ class ReadImages {
 		$CI =& get_instance();
 
 
-		$path=BASEPATH."..".$folder;
+		$path=BASEPATH."../".$folder;
 		$files=scandir($path);
 		$result="";
 

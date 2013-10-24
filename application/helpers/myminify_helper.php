@@ -38,9 +38,9 @@ function minfiles($type, $filesarr) {
 	foreach ($chunks as $chunk) {
 		$chunkstring = implode(",", $chunk);
 		if ($minify) {
-			$chunkstring = "/min/?f={$chunkstring}";
+			$chunkstring = "min/?f={$chunkstring}";
 		} else {
-			$chunkstring = "/{$chunkstring}";
+			$chunkstring = "{$chunkstring}";
 		}
 		if ($type == "js") {
 			echo "<script type=\"text/javascript\" src=\"{$chunkstring}\"></script>";
