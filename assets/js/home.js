@@ -16,13 +16,16 @@ function initHome() {
 		$( window ).resize(function() {
 			resizeWindow();
 		});
-		$( window ).scroll(function() {
+		/*$( window ).scroll(function() {
 			scrollWindow();
-		});
+		});*/
 		initHomeVideo();
 		$(".job .icon").on("click",function(e){
-			console.log($(this).siblings('.job-content')[0]);
-			$($(this).siblings('.job-content')[0]).slideToggle();
+			if (window.isiPad) {
+				$($(this).siblings('.job-content')[0]).toggleClass("hide");
+			} else {
+				$($(this).siblings('.job-content')[0]).slideToggle();
+			}
 		});
 
 		TweenMax.to($(".job .icon"), 1, {opacity: .5, repeat: -1, yoyo:true});
@@ -30,7 +33,8 @@ function initHome() {
 		window.scroller=skrollr.init({
 			forceHeight: false,
 			smoothScrolling:false,
-			mobileDeceleration:0.1
+			mobileDeceleration:0.1,
+			render: skrollrRender
 		});
 	//} else {
 		/*$('.job-content').removeClass("hide");
@@ -44,6 +48,30 @@ function initHome() {
 		});*/
 	//}
 
+}
+
+function skrollrRender(data) {
+    // stop video if its off screen
+    if (data.curTop > 1000) {
+    	$("video.video-bg")[0].pause();
+    } else {
+    	$("video.video-bg")[0].play();
+    }
+    // set indicator when manually scrolling
+    if (window.clickToScrollOn) return;
+    var curSectionIndex = 0;
+    var destSectionIndex = 0;
+	$.each(window.scrollTest, function( index, value ) {
+		if (data.curTop <= value) {
+			curSectionIndex = index;
+		} else if (data.curTop > value) {
+			destSectionIndex = index;
+		}
+	});
+	if (curSectionIndex != destSectionIndex) {
+	    var duration = Math.abs((destSectionIndex - curSectionIndex) * .1);
+		TweenLite.to($( ".white_box" ), duration, {top:50*destSectionIndex + "px"});
+	}
 }
 
 function initHomeVideo() {
@@ -62,7 +90,7 @@ function initHomeVideo() {
 	        if (buffered >= videoDuration) {
 	                clearInterval(watchBuffer);
 	                TweenMax.to(videobg, 1, {opacity: '1'});
-	                $(videobg[0]).play();
+	                $("video.video-bg")[0].play();
 	        }
 	    }
 	};
@@ -110,13 +138,17 @@ function resizeWindow() {
 function clickScrollIndicator(index) {
 	console.log("clicked box",index);
 	var targetScroll = window.scrollDest[index];
-	var curScroll = $(window).scrollTop();
+	var curScroll = window.scroller.getScrollTop();
 	var scrollDiff = targetScroll - curScroll;
 	var duration = Math.abs(scrollDiff / 1000);
 	window.clickToScrollOn = true;
 
+	//alert(curScroll + ", " + targetScroll + ", " + duration);
+
    	TweenLite.to($( ".white_box" ), duration, {top:50*index + "px"});
-	TweenLite.to(window, duration, {scrollTo:{y:targetScroll}, onComplete:function() {window.clickToScrollOn=false;}});
+	window.scroller.stopAnimateTo();
+	window.scroller.animateTo(targetScroll,{duration:duration*1000,easing:"swing",done:function() {window.clickToScrollOn=false;}});
+	//TweenLite.to(window, duration, {scrollTo:{y:targetScroll}, onComplete:function() {window.clickToScrollOn=false;}});
 }
 
 function setVideoBgUrl() {

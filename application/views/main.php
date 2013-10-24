@@ -9,14 +9,14 @@
 	$CI->_add_js("js/gallery.js","footer");
 ?>
 
-            <div class="main-container hide">
+            <div id="skrollr-body" class="main-container hide">
     	        <div id="home">
     	            <div id="video">
-                        <video class="video-bg" src="" loop autoplay></video>
+                        <video class="video-bg" src="" loop></video>
     	                <div class="video-texture"></div>
     	            </div>
     	        </div>
-    	        <div class="tribute section" data-0="top:720px;" data-720="top:720px;" data-800="top:35px;" data-8980="top:35px;" data-10730="top:-1000px;">
+    	        <div class="tribute section" data-7900="top:7935px" data-9150="top:9185px;" data-9936="top:8631px;">
     	        </div>
                 <div class="tribute home-content" data-8400="top:700px;" data-9936="top: -30;">
                     <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-image" data-source="assets/img/home/tribute/quote-img.png" />

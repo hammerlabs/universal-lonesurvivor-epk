@@ -39,9 +39,9 @@
 			$("img").each(function(){
 				var src=$(this).data("source");
 				if (src!="" && src != undefined) {
-					/*if (window.isiPad && src.indexOf("/anim.gif") != -1) {
+					if (window.isiPad && src.indexOf("/anim.gif") != -1) {
 						src = src.replace("/anim.gif", "/quote-large-img.png")
-					}*/
+					}
 					$(this).attr("src",src);
 				}
 			});
