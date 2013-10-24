@@ -72,7 +72,7 @@ if (defined('ENVIRONMENT'))
  * as this file.
  *
  */
-	$system_path = $_SERVER['DOCUMENT_ROOT']. '/system';
+	$system_path = realpath(dirname(__FILE__)) . '/system';
 
 /*
  *---------------------------------------------------------------
@@ -88,7 +88,7 @@ if (defined('ENVIRONMENT'))
  * NO TRAILING SLASH!
  *
  */
-	$application_folder = $_SERVER['DOCUMENT_ROOT']. '/application';
+	$application_folder = realpath(dirname(__FILE__)) . '/application';
 
 /*
  * --------------------------------------------------------------------
