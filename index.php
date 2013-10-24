@@ -47,20 +47,12 @@ if (defined('ENVIRONMENT'))
 	{
 		case 'development':
 			error_reporting(E_ALL);
-			//$system_path = $_SERVER['DOCUMENT_ROOT']. '/../system';
-			//$application_folder = $_SERVER['DOCUMENT_ROOT']. '/../application';
-			$system_path = $_SERVER['DOCUMENT_ROOT']. '/system';
-			$application_folder = $_SERVER['DOCUMENT_ROOT']. '/application';
 		break;
 	
 		case 'testing':
 			error_reporting(E_ALL);
-			$system_path = $_SERVER['DOCUMENT_ROOT']. '/system';
-			$application_folder = $_SERVER['DOCUMENT_ROOT']. '/application';
 		break;
 		case 'production':
-			$system_path = $_SERVER['DOCUMENT_ROOT']. '/system';
-			$application_folder = $_SERVER['DOCUMENT_ROOT']. '/application';
 			error_reporting(0);
 		break;
 
@@ -79,7 +71,7 @@ if (defined('ENVIRONMENT'))
  * as this file.
  *
  */
-	//$system_path = $_SERVER['DOCUMENT_ROOT']. '/../system';
+	$system_path = realpath(dirname(__FILE__)) . '/system';
 
 /*
  *---------------------------------------------------------------
@@ -95,7 +87,7 @@ if (defined('ENVIRONMENT'))
  * NO TRAILING SLASH!
  *
  */
-	//$application_folder = $_SERVER['DOCUMENT_ROOT']. '/../application';
+	$application_folder = realpath(dirname(__FILE__)) . '/application';
 
 /*
  * --------------------------------------------------------------------
