@@ -1,4 +1,5 @@
 <?php  if ( ! defined( 'BASEPATH' ) ) exit( 'No direct script access allowed' );
+/* Copyright 2013 Hammer Technology Services, Inc. */
 
 // list of available langs, all need to be a two characters long word
 $config[ 'available_langs' ] = array( "en", "es" );

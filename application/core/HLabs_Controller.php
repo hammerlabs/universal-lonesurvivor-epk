@@ -1,4 +1,5 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
+/* Copyright 2013 Hammer Technology Services, Inc. */
 
 /**
  * CodeIgniter HLabs Starter Kit Controller

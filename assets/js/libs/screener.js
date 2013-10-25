@@ -1,3 +1,4 @@
+/* Copyright 2013 Hammer Technology Services, Inc. */
 (function ( $ ) {
  
     $.fn.stripScreener = function( options ) {

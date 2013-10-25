@@ -1,3 +1,4 @@
+/* Copyright 2013 Hammer Technology Services, Inc. */
 
 var devices=Array();
 devices["android 3"]="tablet";

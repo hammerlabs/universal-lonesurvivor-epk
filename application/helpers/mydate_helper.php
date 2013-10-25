@@ -1,4 +1,5 @@
 <?php
+/* Copyright 2013 Hammer Technology Services, Inc. */
 
 function getReleaseDateInfo($urlinfo) {
 	date_default_timezone_set('America/Los_Angeles'); // for east coast time zone use 'America/New_York'
