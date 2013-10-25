@@ -160,8 +160,10 @@
 					$(".socialcontent div.socialcontent-wrapper.instagram").removeClass('hide');
 				};
 				$(".socialcontent").data('jsp').reinitialise();
+				$(".socialcontent").data('jsp').scrollTo(0,0);
 			}
 		});
+		(new Social()).build();
 		$('.socialcontent').jScrollPane({
 			showArrows: false,
 			horizontalGutter: 10,

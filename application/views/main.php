@@ -6,7 +6,8 @@
 	$CI->_add_css("css/gallery.css","head");
     $CI->_add_js("js/main.js","footer");
     $CI->_add_js("js/home.js","footer");
-	$CI->_add_js("js/gallery.js","footer");
+    $CI->_add_js("js/gallery.js","footer");
+    $CI->_add_js("js/social.js","footer");
 ?>
 
             <div id="skrollr-body" class="main-container hide">
