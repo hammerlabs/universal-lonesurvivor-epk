@@ -1,4 +1,5 @@
 <?php if ( ! defined( 'BASEPATH' ) ) exit( 'No direct script access allowed' );
+/* Copyright 2013 Hammer Technology Services, Inc. */
 
 class Twitter extends CI_Controller {
 

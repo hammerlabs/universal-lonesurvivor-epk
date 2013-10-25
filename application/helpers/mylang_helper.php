@@ -1,4 +1,5 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+/* Copyright 2013 Hammer Technology Services, Inc. */
 
 /*
  * look for a lang key, and print it
