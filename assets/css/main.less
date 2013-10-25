@@ -97,12 +97,30 @@ input {
    helper custom styles
    ========================================================================== */
 .portrait_detected {
-  width: 768px;
-  height: 1024px;
-  background-image: url(../img/rotate_device.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
+    display: none;
 }
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+    .portrait_detected {
+        width: 200%;
+        height: 200%;
+        background-image: url(../img/rotate_device.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: #000;
+        margin: auto;
+        display: block;
+        position: absolute;
+        top: -50%; 
+        left: -50%; 
+        cursor: pointer;
+        overflow: hidden;
+    }
+}
+
+
 .left {
     float:left; 
 }
@@ -190,7 +208,16 @@ input {
     height: 23px;
     display: inline-block;
 }
-
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+    .audio-control {
+        display: none;
+    }
+    .share-btn-last {
+        margin-right: 2px;
+    }
+}
 /* ==========================================================================
    FOOTER custom styles
    ========================================================================== */
