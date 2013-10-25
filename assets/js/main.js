@@ -118,11 +118,9 @@
     		$("#nav_prodnotes").html("PRODUCTION NOTES");
     	});
     	// make logo link to home
-		if (location.pathname != "/site") {
-			$("#logo").on("click",function(e){
-				location.href = "/site";
-			});	
-		}
+		$("#logo").on("click",function(e){
+			location.href = "site";
+		});	
 
 
 	    // video playlist events
