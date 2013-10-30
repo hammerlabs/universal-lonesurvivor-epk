@@ -21,10 +21,13 @@ function initHome() {
 		});*/
 		initHomeVideo();
 		$(".job .icon").on("click",function(e){
+			var iconHeight = $(this).height();
+			var jobContainer = $(this).parents(".job");
+			var newHeight = (jobContainer.height() == iconHeight ? 260 : iconHeight);
 			if (window.isiPad) {
-				$($(this).siblings('.job-content')[0]).toggleClass("hide");
+				jobContainer.height(newHeight);
 			} else {
-				$($(this).siblings('.job-content')[0]).slideToggle();
+				TweenMax.to(jobContainer, 1, {height: newHeight});
 			}
 		});
 
