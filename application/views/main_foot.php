@@ -5,6 +5,7 @@
                             <h1 id="site-title" class="ir">Lone Survivor</h1>
                             <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="release-date" data-source="assets/img/nav/release-date.png" />
                         </div>
+                        <!--
                         <div id="showtimes-wrapper">
                             <div id="showtimes">
                                 <span class="tickets-text">TICKETS &amp; SHOWTIMES:</span>
@@ -13,6 +14,7 @@
                                 <a href="http://www.movietickets.com/movie?mid=161135" target="_blank" class="movietickets">MOVIETICKETS</a>
                             </div>
                         </div>
+                        -->
                         <div id="nav-wrapper">
                             <div id="nav">
                                 <a id="nav_story" href="story">STORY</a>
