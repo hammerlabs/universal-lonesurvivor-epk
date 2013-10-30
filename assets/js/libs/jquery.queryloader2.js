@@ -40,6 +40,7 @@
             base.options = $.extend({},$.queryLoader2.defaultOptions, options);
 
             //find images
+            base.getAllBackgroundImages();
             base.findImageInElement(base.el);
             if (base.options.deepSearch == true) {
                 base.$el.find("*:not(script)").each(function() {
@@ -49,12 +50,7 @@
 
             //create containers
             base.createPreloadContainer();
-            base.createOverlayLoader();
-
-            if (base.qLdone == base.qLimageCounter) {
-                base.endLoader();
-            }
-            
+            if (base.options.useOverlay) base.createOverlayLoader();
         };
 
         //the container where unbindable images will go
@@ -70,7 +66,7 @@
             for (var i = 0; base.qLbgimages.length > i; i++) {
                 base.addImageForPreload(base.qLbgimages[i]);
                 continue;
-                $.ajax({
+                /*$.ajax({
                     url: base.qLbgimages[i],
                     type: 'HEAD',
                     complete: function (data) {
@@ -78,7 +74,7 @@
                             base.addImageForPreload(this['url']);
                         }
                     }
-                });
+                });*/
             }
         };
 
@@ -119,7 +115,7 @@
                 top: "50%"
             }).appendTo(base.qLoverlay);
 
-            base.qLbar2 = $("<div id='qLbar2' class='qLbar'></div>").css({
+            /*base.qLbar2 = $("<div id='qLbar2' class='qLbar'></div>").css({
                 height: base.options.barHeight + "px",
                 marginTop: "-" + (base.options.barHeight / 2) + "px",
                 backgroundColor: base.options.barColor,
@@ -147,7 +143,7 @@
                 position: "absolute",
                 top: "51%",
                 opacity:0.3
-            }).appendTo(base.qLoverlay);            
+            }).appendTo(base.qLoverlay);  */          
 
 
             if (base.options.percentage == true) {
@@ -175,7 +171,6 @@
             base.qLdestroyed = true;
             base.qLimageContainer.remove();
             base.qLoverlay.remove();
-            base.options.onComplete();
         };
 
         base.findImageInElement = function (element) {
@@ -225,6 +220,41 @@
             }
         }
 
+        base.getAllBackgroundImages = function() {
+            var sheetList = document.styleSheets;
+            var ruleList;
+            var i, j;
+            var imageList = [];
+
+            /* look through stylesheets in reverse order that
+            they appear in the document */
+            for (i=sheetList.length-1; i >= 0; i--) {
+                ruleList = sheetList[i].cssRules;
+                for (j=0; j<ruleList.length; j++) {
+                    //console.log(ruleList[j].cssText, ruleList[j]);
+                    if (ruleList[j].type == CSSRule.STYLE_RULE && 
+                        ruleList[j].cssText.indexOf('background-image') != -1) {
+                        var bgImageRule = ruleList[j].style["background-image"];
+                        if (!bgImageRule) {
+                            bgImageRule = ruleList[j].cssText.substring(ruleList[j].cssText.indexOf("background-image:")+17);
+                            bgImageRule = bgImageRule.substring(0, bgImageRule.indexOf(")")-1);
+                        }
+                        // assuming there are no script file names in URL like index.html 
+                        // and that location href ends in /
+                        bgImageRule = bgImageRule.replace("../", location.href);
+                        var bgImageRule = bgImageRule.replace(/"/g,"").replace(/url\(|\)$/ig, "");
+                        if ($.inArray(bgImageRule, base.qLbgimages) == -1) {
+                            var extra = "";
+                            if (base.isIE() || base.isOpera()) extra = "?rand=" + Math.random();
+                            base.qLbgimages.push(bgImageRule + extra);
+                            console.log(bgImageRule);
+                        }
+                    }   
+                }
+            }
+            return null;
+        }
+
         base.isIE = function () {
             return navigator.userAgent.match(/msie/i);
         };
@@ -244,14 +274,16 @@
             base.qLdone++;
 
             var percentage = (base.qLdone / base.qLimageCounter) * 100;
-            base.qLbar.stop().animate({
-                width: percentage + "%",
-                minWidth: percentage + "%"
-            }, 200);
-            base.qLbar2.stop().animate({
-                width: percentage + "%",
-                minWidth: percentage + "%"
-            }, 200);
+            if (base.options.useOverlay) {
+                base.qLbar.stop().animate({
+                    width: percentage + "%",
+                    minWidth: percentage + "%"
+                }, 200);
+                /*base.qLbar2.stop().animate({
+                    width: percentage + "%",
+                    minWidth: percentage + "%"
+                }, 200);*/
+            }
 
             if (base.options.onProgress) {
                 base.options.onProgress(Math.ceil(percentage));                
@@ -273,12 +305,15 @@
         };
 
         base.onLoadComplete = function() {
-            if (base.options.completeAnimation == "grow") {
+            if (!base.options.useOverlay) {
+                //base.destroyContainers();
+                base.options.onComplete();
+            } else if (base.options.completeAnimation == "grow") {
                 var animationTime = 500;
 
-                base.qLbar2.stop().animate({
+                /*base.qLbar2.stop().animate({
                     "width": "100%"
-                });
+                });*/
                 base.qLbar.stop().animate({
                     "width": "100%"
                 }, animationTime, function () {
@@ -311,7 +346,8 @@
     $.queryLoader2.defaultOptions = {
         onComplete: function() {},
         onProgress: function() {},
-        backgroundColor: "#2c353e",
+        backgroundColor: "#000",
+        useOverlay: true,
         barColor: "#FFF",
         overlayId: 'qLoverlay',
         barHeight: 1,
