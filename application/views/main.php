@@ -17,9 +17,9 @@
     	                <div class="video-texture"></div>
     	            </div>
     	        </div>
-    	        <div class="tribute section" data-7900="top:7935px" data-9150="top:9185px;" data-9936="top:8631px;">
+    	        <div class="tribute section" data-7900="top:7935px" data-9150="top:9185px;" data-11936="top:8631px;">
     	        </div>
-                <div class="tribute home-content" data-8400="top:700px;" data-9936="top: -30;">
+                <div class="tribute home-content" data-8400="top:700px;" data-11936="top: -30;">
                     <img onload="$(this).data('loaded', 'loaded');" onerror="$(this).data('loaded', 'loaded');" class="quote-image" data-source="assets/img/home/tribute/quote-img.png" />
                     <div class="seals">
                         <div class="seal marcus">
