@@ -22,7 +22,7 @@
                                 <a id="nav_support" href="charity">SUPPORT OUR HEROES</a>
                             </div>
                         </div>
-                        <a id="flag_link" target="_blank" href="http://www.honorflight.org/programs/flags.cfm"> FLAG OF<br />OUR HEROES</a>
+                        <a id="flag_link" target="_blank" href="http://www.honorflight.org/programs/flags.cfm"> FLAG OF<br />SERVICE</a>
                     </div>
                     <div class="left">
                         <div class="indicator">
