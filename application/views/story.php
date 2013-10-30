@@ -6,6 +6,7 @@
 	$CI->_add_css("css/gallery.css","head");
 	$CI->_add_js("js/main.js","footer");
 	$CI->_add_js("js/gallery.js","footer");
+    $CI->_add_js("js/social.js","footer");
 ?>
 
             <div class="main-container hide">
