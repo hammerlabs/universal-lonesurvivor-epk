@@ -1,7 +1,7 @@
 .main-container #charity {
-  background-image: url(../img/charity/charity-bg.jpg);
+  background-image: url(../../assets/img/charity/charity-bg.jpg);
   width: 100%;
-  height: 1472px;
+  height: 1854px;
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -13,7 +13,45 @@
   position: absolute;
   top: 625px;
   left: 50%;
-  margin-left: -566px;
+  margin-left: -500px;
+}
+.main-container #charity .content {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #cfcfcf;
+  width: 670px;
+  text-align: center;
+  position: absolute;
+  top: 625px;
+  left: 50%;
+  margin-left: -500px;
+}
+.main-container #charity .content.one {
+  top: 660px;
+}
+.main-container #charity .content.two {
+  top: 1610px;
+}
+.main-container #charity .donate-wrapper {
+  width: 670px;
+  text-align: center;
+  position: absolute;
+  top: 760px;
+  left: 50%;
+  margin-left: -500px;
+}
+.main-container #charity .donate-wrapper a {
+  font-size: 28px;
+  background-image: url(../../assets/img/charity/donate-bg.jpg);
+  background-repeat: no-repeat;
+  width: 180px;
+  height: 60px;
+  display: inline-block;
+  text-align: center;
+  padding-top: 10px;
+}
+.main-container #charity .donate-wrapper a:hover {
+  color: #fff;
 }
 .main-container #charity .charity-wrapper {
   position: absolute;
@@ -35,48 +73,46 @@
 }
 .main-container #charity .charity-wrapper div {
   color: #999999;
+  font-size: 13px;
   position: relative;
   left: 287px;
   top: -16px;
 }
-.main-container #charity .charity-wrapper a {
-  position: relative;
-  top: 130px;
-  left: 286px;
-  background-image: url(../img/charity/donate-bg.jpg);
-  background-repeat: no-repeat;
-  width: 80px;
-  height: 30px;
-  display: block;
-  text-align: center;
-  padding-top: 10px;
-}
-.main-container #charity .charity-wrapper a:hover {
-  color: #fff;
-}
 .main-container #charity .lone_survivor_foundation {
-  top: 720px;
-  background-image: url(../img/charity/lone-survivor-foundation.png);
+  top: 1390px;
+  background-image: url(../../assets/img/charity/lone-survivor-foundation.png);
   background-repeat: no-repeat;
+  width: 718px;
+  height: 186px;
 }
 .main-container #charity .lone_survivor_foundation div {
-  width: 320px;
+  width: 420px;
+  left: 284px;
+  top: 47px;
 }
 .main-container #charity .navy_seal_foundation {
-  top: 940px;
-  background-image: url(../img/charity/navy-seal-foundation.png);
+  top: 1085px;
+  background-image: url(../../assets/img/charity/navy-seal-foundation.png);
   background-repeat: no-repeat;
+  width: 735px;
+  height: 253px;
 }
 .main-container #charity .navy_seal_foundation div {
-  width: 365px;
+  width: 435px;
+  left: 289px;
+  top: 44px;
 }
 .main-container #charity .got_your_6 {
-  top: 1160px;
-  background-image: url(../img/charity/got-your-6.png);
+  top: 860px;
+  background-image: url(../../assets/img/charity/got-your-6.png);
   background-repeat: no-repeat;
+  width: 727px;
+  height: 179px;
 }
 .main-container #charity .got_your_6 div {
-  width: 365px;
+  width: 435px;
+  left: 289px;
+  top: 40px;
 }
 .main-container #charity .blocktext {
   padding-left: 12px;
