@@ -223,7 +223,7 @@
         base.getAllBackgroundImages = function() {
             var sheetList = document.styleSheets;
             var ruleList;
-            var i, j;
+            var i, j, k;
             var imageList = [];
 
             /* look through stylesheets in reverse order that
@@ -241,10 +241,10 @@
                             bgImageRule = ruleList[j].cssText.substring(ruleList[j].cssText.indexOf("background-image:")+17);
                         }
                         var bgImages = bgImageRule.split(",");
-                        for (var i = bgImages.length - 1; i >= 0; i--) {
+                        for (k = bgImages.length - 1; k >= 0; k--) {
                             // assuming there are no script file names in URL like index.html 
                             // and that location href ends in /
-                            var bgImage = bgImages[i].replace("../", location.href);
+                            var bgImage = bgImages[k].replace("../", location.href);
                             var bgImage = bgImage.replace(/"/g,"").replace(/url\(|\)$/ig, "");
                             if ($.inArray(bgImage, base.qLbgimages) == -1) {
                                 var extra = "";
