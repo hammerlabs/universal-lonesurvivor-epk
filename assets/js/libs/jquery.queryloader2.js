@@ -229,17 +229,19 @@
             /* look through stylesheets in reverse order that
             they appear in the document */
             for (i=sheetList.length-1; i >= 0; i--) {
-                ruleList = sheetList[i].cssRules;
+                try {
+                    ruleList = sheetList[i].cssRules;
+                } catch (e) {}
                 if (!ruleList) continue;
                 for (j=0; j<ruleList.length; j++) {
                     //console.log(ruleList[j].cssText, ruleList[j]);
                     if (ruleList[j].type == CSSRule.STYLE_RULE && 
                         ruleList[j].cssText.indexOf('background-image') != -1) {
                         var bgImageRule = ruleList[j].style["background-image"];
-                        if (bgImageRule.indexOf("gradient") != -1) continue;
                         if (!bgImageRule) {
                             bgImageRule = ruleList[j].cssText.substring(ruleList[j].cssText.indexOf("background-image:")+17);
                         }
+                        if (bgImageRule.indexOf("gradient") != -1) continue;
                         var bgImages = bgImageRule.split(",");
                         for (k = bgImages.length - 1; k >= 0; k--) {
                             // assuming there are no script file names in URL like index.html 
