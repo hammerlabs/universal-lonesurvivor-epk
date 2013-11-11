@@ -5,6 +5,8 @@
             window.device_type = "<?php echo $device_type ?>";
             if(window.device_type == "mobile") {
                 self.location="<?php echo $mobile_redirect_url ?>"; 
+            } else {
+                self.location="<?php echo $desktop_url ?>"; 
             }
        
             if( /iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {

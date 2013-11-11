@@ -4,9 +4,9 @@
 class Device_redirect extends CI_Controller {
 	public function index() {
 		$this->load->helper('url');
-		
+		$ua=getBrowser();
+
 		if ($this->config->item( 'use_php_redirects' ) == true) {
-			$ua=getBrowser();
 			if ($ua['device_type']=="mobile"){
 				redirect( $this->config->item( 'mobile_redirect_url' ) );	
 			}
@@ -14,11 +14,12 @@ class Device_redirect extends CI_Controller {
 				redirect('site');	
 			}
 		} else {
-			$data = new array();
+			$data=array();
 			$data['device_type'] = $ua['device_type'];
 			$data['mobile_redirect_url'] = $this->config->item( 'mobile_redirect_url' ); 
 			$data['desktop_url'] = 'site'; 
-			// load view with js redirection
+			$js_redirect = $this->load->view('js_redirect', $data, true);
+			$this->output->append_output($js_redirect);
 		}
 
 
