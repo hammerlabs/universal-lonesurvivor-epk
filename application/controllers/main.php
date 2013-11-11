@@ -13,7 +13,7 @@ class Main extends HLabs_Controller {
 
 		$data=array();
 
-		$data["mobile_device_url"] = $this->config->item( 'mobile_redirect_url' );
+		$data["mobile_redirect_url"] = $this->config->item( 'mobile_redirect_url' );
 
 		$urlinfo=getUrl();
 		$releaseDateInfo=getReleaseDateInfo($urlinfo);

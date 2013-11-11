@@ -26,11 +26,11 @@
             window.ga_account = "<?php echo $ga_account; ?>"; 
             window.device_type = "<?php echo $ua["device_type"] ?>";
             if(window.device_type == "mobile") {
-                self.location="<?php echo $mobile_device_url ?>"; 
+                self.location="<?php echo $mobile_redirect_url ?>"; 
             }
        
             if( /iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-                window.location.href = "<?php echo $mobile_device_url ?>";  
+                window.location.href = "<?php echo $mobile_redirect_url ?>";  
             }
         </script>  
 
