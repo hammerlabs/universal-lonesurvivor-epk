@@ -18,6 +18,7 @@ $config['check_folders']=array(
 	array("folder"=>"assets/uploadimages","requires_write"=>true)
 );
 
+$config["use_php_redirects"] = true;
 $config["mobile_redirect_url"] = "http://universalpictures.mobi/lonesurvivor";
 
 //Meta tags, FB tags, etc.

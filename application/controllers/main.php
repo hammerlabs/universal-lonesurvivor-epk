@@ -5,13 +5,15 @@ class Main extends HLabs_Controller {
 	
 	public function buildView($viewName) {
 		$ua=getBrowser();
-		if ($ua['device_type']=="mobile"){
+		if ($ua['device_type']=="mobile" && ($this->config->item( 'use_php_redirects' ) == true)){
 			redirect( $this->config->item( 'mobile_redirect_url' ) );	
 		}
 
 		$this->load->library("readimages");
 
 		$data=array();
+
+		$data["mobile_device_url"] = $this->config->item( 'mobile_redirect_url' );
 
 		$urlinfo=getUrl();
 		$releaseDateInfo=getReleaseDateInfo($urlinfo);
