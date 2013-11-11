@@ -25,7 +25,7 @@ $_environments_list = array(
 	 * testing urls
 	 */
 	'testing' => array(
-		'dev.thecapitol.pn'
+		'upqa.com'
 	)
 
 );
